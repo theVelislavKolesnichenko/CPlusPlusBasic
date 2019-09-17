@@ -4,4 +4,4 @@
 
 [Среда за разработване](VisualStudio)
 
-[Среда за разработване](ProjectStructure)
+[Структора на проект](ProjectStructure)
