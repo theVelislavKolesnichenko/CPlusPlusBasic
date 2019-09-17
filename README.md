@@ -1,2 +1,5 @@
-# CPlusPlusBasic
-Getting Started with C ++ Programming
+# Първи стъпки в програмирането със C ++
+
+## 1 Лабораторно упражнение:
+
+[Среда за разработване](VisualStudio)
