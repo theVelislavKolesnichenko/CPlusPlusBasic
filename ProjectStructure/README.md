@@ -23,3 +23,63 @@ int main()
 	return 0;
 }
 ```
+
+## Задача 1
+
+Намерете грешките в програмите:
+
+### а)
+
+```c++
+#include <iostream>
+using namespace std;
+
+cout << "TU-Varna" << endl;
+
+int main() 
+{
+	return 0;
+}
+```
+
+### b)
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+	cout << "TU-Varna << endl;
+
+	return 0;
+}
+```
+
+### c)
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+	cout << "Tu-Varna" << endline;
+	
+	return 0;
+}
+```
+
+### d)
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+	cout << 7 * 6 << endl
+
+	return 0;
+}
+```
