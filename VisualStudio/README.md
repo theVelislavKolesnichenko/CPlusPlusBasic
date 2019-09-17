@@ -1,4 +1,4 @@
- [назад](CPlusPlusBasic)
+ [назад]()
  
  # ПЪРВИ СТЪПКИ С VISUAL STUDIO
 
