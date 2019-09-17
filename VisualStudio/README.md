@@ -10,3 +10,16 @@ Visual Studio поддържа различни езици за програми
 
 Изтеглете средата [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/) това е свободна среда за разработване на приложения.
 
+Може да инсталирате компоненти по избор за текущия курс ще ви е необходим Universal Windows Platform development. По време на инсталирането следвайте стъпките за инсталация.
+
+![vsi.png](image/vsi.png)
+
+## Създаване на конзолна програма
+
+### Създаване на нов проект
+
+![cnp.png](image/cnp.png)
+
+### Избиране на език, платформа и тип на проекта
+
+![sp.png](image/sp.png)
