@@ -6,6 +6,8 @@
 
 [Структора на проект](ProjectStructure)
 
+[Математически изрази](Math/ArithmeticOperators.md)
+
 ## 2 Лабораторно упражнение:
 
 [Конвертиране на типове](TypeConversion)
