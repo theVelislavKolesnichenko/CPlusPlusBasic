@@ -55,6 +55,30 @@ parameter list - списак от променливи който са нужн
 body of the function - тяло на функцията в него се зааписват инструкциите решаващи дадената задача (алгоритъм)
 } - затваряща скоба за оказване края на функцията 
 
+#### Пример
+
+```c++
+  #include <iostream>
+  using namespace std;
+  
+  int sum(int a, int b);
+  
+  int main()
+  {
+    int a,b,c;
+    return 0;
+  }
+  
+  int sum(int a, int b)
+  {
+    int result;
+    
+    result = a + b;
+  
+    return result;
+  }
+```
+
 ### Задача 1
 
 ### Задача 2
