@@ -12,7 +12,7 @@
 
 ## 3 Лабораторно упражнение:
 
-[Съставни оператори](Math)
+[Съставни оператори](Math/CompoundAssignmentOperators.md)
 
 [Форматиране на входа и изхода](InputOutputFormatting)
 
