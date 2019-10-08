@@ -59,7 +59,9 @@ return_type function_name( parameter_list )
 
 ## Използване на функция
 
+```c++
 variable_name = function_name(  real_values );
+```
 
 variable_name - променлива на която се присвоява резултата от изпълнението на функцията (връщащата стойност)
 
