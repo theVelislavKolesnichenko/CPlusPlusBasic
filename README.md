@@ -74,6 +74,8 @@
 
 [Низове](String)
 
+[Многомерни масиви](MultidimensionalArrays)
+
 [Седма домашна работа](HomeWork/seventh.md)
 
 ## 10 Лабораторно упражнение:
