@@ -104,4 +104,4 @@
 
 Консултация за курсова работа
 
-[Резултати семестриален контрол](thevelislavkolesnichenko.github.io/CPlusPlusBasic)
+[Резултати семестриален контрол](www.thevelislavkolesnichenko.github.io/CPlusPlusBasic)
