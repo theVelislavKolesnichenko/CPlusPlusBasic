@@ -1,3 +1,5 @@
+<iframe width="700" height="406" frameborder="0" scrolling="no" src="?wdAllowInteractivity=False&Item='bp_SIT1_1a'!A1%3AAL18&wdHideGridlines=True&wdInConfigurator=True"></iframe>
+
 # Първи стъпки в програмирането със C ++
 
 ## 1 Лабораторно упражнение:
