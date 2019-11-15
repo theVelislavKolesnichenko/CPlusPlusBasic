@@ -2,21 +2,21 @@
 
 ## 1 Лабораторно упражнение:
 
-[Среда за разработване](VisualStudio)
+[Среда за разработване](Chapters&Strategies/VisualStudio)
 
-[Структора на проект](ProjectStructure)
+[Структора на проект](Chapters&Strategies/ProjectStructure)
 
-[Математически изрази](Math/ArithmeticOperators.md)
+[Математически изрази](Chapters&Strategies/Math/ArithmeticOperators.md)
 
 ## 2 Лабораторно упражнение:
 
-[Конвертиране на типове](TypeConversion)
+[Конвертиране на типове](Chapters&Strategies/TypeConversion)
 
 ## 3 Лабораторно упражнение:
 
-[Съставни оператори](Math/CompoundAssignmentOperators.md)
+[Съставни оператори](Chapters&Strategies/Math/CompoundAssignmentOperators.md)
 
-[Форматиране на входа и изхода](InputOutputFormatting)
+[Форматиране на входа и изхода](Chapters&Strategies/InputOutputFormatting)
 
 [Първа домашна работа](HomeWork/first.md)
 
@@ -24,9 +24,9 @@
 
 ##### САМОСТОЯТЕЛНА РАБОТА 1
 
-[Структора](Structures)
+[Структора](Chapters&Strategies/Structures)
 
-[Функции](Functions)
+[Функции](Chapters&Strategies/Functions)
 
 [Втора домашна работа](HomeWork/second.md)
 
@@ -34,11 +34,11 @@
 
 ##### САМОСТОЯТЕЛНА РАБОТА 2
 
-[Битови оператори](BitwiseOperators)
+[Битови оператори](Chapters&Strategies/BitwiseOperators)
 
-[Логически оператори](LogicalOperator)
+[Логически оператори](Chapters&Strategies/LogicalOperator)
 
-[Условни оператори](ConditionalOperators)
+[Условни оператори](Chapters&Strategies/ConditionalOperators)
 
 [Трета домашна работа](HomeWork/third.md)
 
@@ -46,7 +46,7 @@
 
 ##### САМОСТОЯТЕЛНА РАБОТА 3
 
-[Цикли](Loop)
+[Цикли](Chapters&Strategies/Loop)
 
 [Четвърта домашна работа](HomeWork/fourth.md)
 
@@ -54,7 +54,7 @@
 
 ##### САМОСТОЯТЕЛНА РАБОТА 4
 
-[Указатели](Pointer)
+[Указатели](Chapters&Strategies/Pointer)
 
 [Пета домашна работа](HomeWork/fifth.md)
 
@@ -62,7 +62,7 @@
 
 ##### САМОСТОЯТЕЛНА РАБОТА 5
 
-[Масиви](Array)
+[Масиви](Chapters&Strategies/Array)
 
 [Шеста домашна работа](HomeWork/sixth.md)
 
@@ -70,11 +70,11 @@
 
 ##### САМОСТОЯТЕЛНА РАБОТА 6
 
-[Символи](Character)
+[Символи](Chapters&Strategies/Character)
 
-[Низове](String)
+[Низове](Chapters&Strategies/String)
 
-[Многомерни масиви](MultidimensionalArrays)
+[Многомерни масиви](Chapters&Strategies/MultidimensionalArrays)
 
 [Седма домашна работа](HomeWork/seventh.md)
 
@@ -82,9 +82,9 @@
 
 ##### САМОСТОЯТЕЛНА РАБОТА 7
 
-[Сортиране на масив](BubbleSort)
+[Сортиране на масив](Chapters&Strategies/BubbleSort)
 
-[Tърсене в масив](Search)
+[Tърсене в масив](Chapters&Strategies/Search)
 
 [Осма домашна работа](HomeWork/eighth.md)
 
@@ -92,13 +92,13 @@
 
 ##### САМОСТОЯТЕЛНА РАБОТА 8
 
-[Файлове](files)
+[Файлове](Chapters&Strategies/files)
 
 ## 12 Лабораторно упражнение:
 
-[Масиви от структори](ArrayStruct)
+[Масиви от структори](Chapters&Strategies/ArrayStruct)
 
-[Файлове от структори](FileStruct)
+[Файлове от структори](Chapters&Strategies/FileStruct)
 
 ## 13 Лабораторно упражнение:
 
