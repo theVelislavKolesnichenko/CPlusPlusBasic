@@ -1,1 +1,6 @@
 BP_2019_2020/
+.vs/
+Debub/*
+CPlusPlus/Debub/*
+*.vcxproj.user
+*vcxproj.filters
