@@ -30,8 +30,8 @@ cout << endl << ch4 << endl;
 |Име|Значение|
 |--|--|
 strlen(str1) | определя броя на символите в str1
-strcpy(str1, str2)| копира първите n символа от str2 в str1 и връща указател към str1
-strncpy(str1, str2, n) | копира str2 в str1 и връща указател към str1
+strcpy(str1, str2) | копира str2 в str1 и връща указател към str1
+strncpy(str1, str2, n)| копира първите n символа от str2 в str1 и връща указател към str1
 strcmp(str1, str2)| сравнява str1 и str2 по символи. Връща 0 - str1=str2, -1 - str1 < str2, 1 - str1 > str2
 strncmp(str1, str2, n)| сравнява първите n символа от str2 в str1 по символи. Връща 0 - str1=str2, -1 - str1 < str2, 1 - str1 > str2
 stricmp(str1, str2)|сравнява два символни масива без значение от размера и вида на буквите 
