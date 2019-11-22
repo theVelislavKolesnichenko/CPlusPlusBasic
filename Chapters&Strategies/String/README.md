@@ -29,14 +29,14 @@ cout << endl << ch4 << endl;
 
 |Име C++ 98|Име Visual C++ 11|Значение|
 |--|--|--|
-strlen(str1) | определя броя на символите в str1
+strlen(str1) |strlen(str1) | определя броя на символите в str1
 strcpy(str1, str2) | strcpy_s(str1, str2) | копира str2 в str1 и връща указател към str1
 strncpy(str1, str2, n)| strncpy_s(str1, str2, n) | копира първите n символа от str2 в str1 и връща указател към str1
 strcmp(str1, str2)|strcmp(str1, str2)| сравнява str1 и str2 по символи. Връща 0 - str1=str2, -1 - str1 < str2, 1 - str1 > str2
 strncmp(str1, str2, n)|strncmp(str1, str2, n)| сравнява първите n символа от str2 в str1 по символи. Връща 0 - str1=str2, -1 - str1 < str2, 1 - str1 > str2
 stricmp(str1, str2)|stricmp(str1, str2)|сравнява два символни масива без значение от размера и вида на буквите 
-strupr(str1)| _strupr_s(str1)|преобразува малките символи в големи
-strlwr(str)| _strlwr_s(str) |преобразува големите символи в малки
+strupr(str1)| _strupr_s(str1, sizeof(str1))|преобразува малките символи в големи
+strlwr(str)| _strlwr_s(str, sizeof(str1)) |преобразува големите символи в малки
 strcat(str1, str2)|strcat_s(str1, str2)|добавя копие на str2 към стр1
 strncat(str1, str2)|strncat_s(str1, str2)|добавя копие на първите n символа от str2 към str1
 strchr(str1, ch)|strchr(str1, ch)|връща указател към първото срещане на символа ch в масива от символи str1. Ако не се среша връща празен указател.
