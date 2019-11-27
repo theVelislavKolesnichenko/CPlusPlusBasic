@@ -1,6 +1,7 @@
 # Първи стъпки в програмирането със C ++
 
-[C++ Учебник](https://1drv.ms/b/s!AniZF0_PR4QBj44XLHkZJXol72E2Mg?e=rFa1wU)
+[C++ Помагало](https://1drv.ms/b/s!AniZF0_PR4QBj44XLHkZJXol72E2Mg?e=rFa1wU)
+[C++ Помагало](https://cpp-book.softuni.bg/)
 
 # Защита на индивидуалните задачи
 
