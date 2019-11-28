@@ -22,7 +22,7 @@
 
 [Среда за разработване](Chapters&Strategies/VisualStudio)
 
-[Структора на проект](Chapters&Strategies/ProjectStructure)
+[Структура на проект](Chapters&Strategies/ProjectStructure)
 
 [Математически изрази](Chapters&Strategies/Math/ArithmeticOperators.md)
 
