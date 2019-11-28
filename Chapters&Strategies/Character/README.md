@@ -2,7 +2,7 @@
 
 char - тип данни за символи
 
-Символите са дефинират в еденични кавички. Всеки символ има цифров код който е описан в ASCII (American Standard Code for Information Interchange) таблица:
+Символите са дефинират в единични кавички. Всеки символ има цифров код който е описан в ASCII (American Standard Code for Information Interchange) таблица:
 
 Code|	Symbol	|Code|	Symbol|	Code|	Symbol|	Code|	Symbol|
 |--|--|--|--|--|--|--|--|
@@ -39,7 +39,7 @@ Code|	Symbol	|Code|	Symbol|	Code|	Symbol|	Code|	Symbol|
 30	|RS (record separator)	|62	|>|	94|	^|	126	|~
 31	|US (unit separator)	|63	|?|	95|	_|	127	|DEL (delete)
 
-Започваики от променлива със стойност 0, посредством инкрементиране, може да се достигне до всеки символ в ASCII таблицата.
+Започвайки от променлива със стойност 0, посредством инкрементиране, може да се достигне до всеки символ в ASCII таблицата.
 
 ## Деклариране на променлива символ
 
