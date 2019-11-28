@@ -42,7 +42,7 @@
 
 ##### САМОСТОЯТЕЛНА РАБОТА 1
 
-[Структора](Chapters&Strategies/Structures)
+[Структура](Chapters&Strategies/Structures)
 
 [Функции](Chapters&Strategies/Functions)
 
@@ -102,7 +102,7 @@
 
 [Сортиране на масив](Chapters&Strategies/BubbleSort)
 
-[Tърсене в масив](Chapters&Strategies/Search)
+[Търсене в масив](Chapters&Strategies/Search)
 
 [Осма домашна работа](HomeWork/eighth.md)
 
@@ -114,9 +114,9 @@
 
 ## 12 Лабораторно упражнение:
 
-[Масиви от структори](Chapters&Strategies/ArrayStruct)
+[Масиви от структури](Chapters&Strategies/ArrayStruct)
 
-[Файлове от структори](Chapters&Strategies/FileStruct)
+[Файлове от структури](Chapters&Strategies/FileStruct)
 
 ## 13 Лабораторно упражнение:
 
