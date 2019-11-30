@@ -47,9 +47,8 @@ void array_in(int arr[], int size)
 }  
 
 void array_print(int arr[], int size)  
-{  
-    int i;  
-    for (i = 0; i < size; i++)  
+{   
+    for (int i = 0; i < size; i++)  
         cout << arr[i] << " ";  
     cout << endl;  
 }  
