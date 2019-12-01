@@ -33,6 +33,7 @@ ios::end - измества от края на файла
 
 ## Текстови файлове
 
+```c++
 fstream MyFile; int x; MyFile.open("chisla.txt",ios::out);
 do {    cin>>x;    
 if (x==0) break;    
@@ -46,14 +47,14 @@ while (MyFile>>x)
   sum+=x; 
 MyFile.close(); 
 cout<<"sumata na chislata e "<<sum<<endl;
-
+```
 ## Двуични файлове
 
 променлива.write (променлива , размер );
 променлива.read ( променлива, размер);
 
 streampos begin, end;
-
+```c++
 	ofstream myFile2("example.bin", ios::binary);
 	int a[10]{ 1,2,3,4,5,6,7,8,9,0 };
 	int a2[20];
@@ -86,3 +87,4 @@ streampos begin, end;
 		cout << a2[i] << endl;
 	}
 
+```
