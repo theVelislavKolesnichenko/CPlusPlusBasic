@@ -48,7 +48,7 @@ while (MyFile>>x)
 MyFile.close(); 
 cout<<"sumata na chislata e "<<sum<<endl;
 ```
-## Двуични файлове
+## Двoични файлове
 
 променлива.write (променлива , размер );
 променлива.read ( променлива, размер);
