@@ -5,12 +5,12 @@
 #include <fstream>
 using namespace std;
 
-typedef struct {
+struct Book {
 	char title[50];
 	char author[50];
 	int pages;
 	double pice;
-} Book;
+};
 
 #define booksCount 3
 
