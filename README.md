@@ -116,7 +116,7 @@
 
 [Масиви от структури](Chapters&Strategies/ArrayStruct)
 
-[Файлове от структури](Chapters&Strategies/FileStruct)
+[Записване и четене на структура във файл](Chapters&Strategies/FileStruct)
 
 ## 13 Лабораторно упражнение:
 
