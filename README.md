@@ -114,9 +114,7 @@
 
 ## 12 Лабораторно упражнение:
 
-[Масиви от структури](Chapters&Strategies/ArrayStruct)
-
-[Записване и четене на структура във файл](Chapters&Strategies/FileStruct)
+[Записване/четене на масиви от структури във файл](Chapters&Strategies/ArrayStruct)
 
 ## 13 Лабораторно упражнение:
 
