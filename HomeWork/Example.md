@@ -114,117 +114,131 @@ cae 2:
 		cin >> n;
 	} while(n < 1 || n > MAX_COUNT - count);
 	insert_cars(cars, count, n);
+	count = count + n;
+}
+break;
+case 3:
+{
+	printAll(cars, count);
 }
 break;
 .
 .
 .
-insert_cars(Car cars[], int count, int n)
+void insert_cars(Car cars[], int count, int n)
 {
 	for(int i = count; i < count + n; i++)
 	{
 		cars[i]=Insert_car();
 	}
 }
+void printAll(Car cars[], int count)
+{
+	for(int i=0; i<count; i++)
+	{
+		printCar(cars[i]);
+	}
+}
+void printCar(Car cars[], int count)
+{
+	cout << "Brand: " << car.brand << endl;
+	.
+	.
+	.
+}
 ```
 
+## Примерни структори
 
-3. Извеждане
-Student students[100];
-int count=0; //20
-for(int i=0; i<count; i++){
-print_students(students, i);
-}
-void print_students(Student stu[], int index){
-cout<<stu[index].name;
-cout<<stu[index].f_number;
-.
-.
-.
-}
-
-
-
-ТОЧКИ КУРСОВА РАБОТА: 50
-A. 3
-B. 7
-C. 5
-D. 12
-E. 8
-F. 10
-G. 5
-
-
-
-(ОТКЛОНЕНИЕ) 
-x= a^3 + b:
-
-int x(int a, int b);
-int pow3(int a);
-int x(int a, int b){
-int pow3(a) + b;
-return x;
-}
-int pow3(int a)
+```c++
+struct RealеstateAgency
 {
-return a*a*a;
-}
-
-СТРУКТУРИ
-struct AI{
-int number;
-char name[50];
-I imot[50];
+	int number;
+	char name[50];
+	realestate realestates[50];
 };
 
-struct I{
-char kvartal[8];
-char ul[20];
-double a;
-double p;
-int b;
-int r;
+struct realestate 
+{
+	char residential[8];
+	char street[20];
+	double a;
+	double p;
+	int b;
+	int r;
 };
-
-
+``` 
+## Примерно въвеждане
+ 
+```c++
+// Въвеждане на списък с книги
 void Insert_items(Book books[], int start, int count)
 {
-	for(int i=start; i<count; i++)
+	for(int i=start; i<count + start; i++)
 	{
 		cin>>books[i].name;
 		cin>>books[i].author;
 		cin>>books[i].price;
 	}
 }
-
-
-
-
-Korab Insert()
+// Въвеждане на един кораб
+Ship Insert()
 {
-	Korab korab;
-cout<<"Enter name=";
-cin>>korab.name;
-cout<<"Enter numbers=";
-cin>>korab.number;
+	Ship ship;
+	cout<<"Enter name=";
+	cin>>ship.name;
+	cout<<"Enter numbers=";
+	cin>>ship.number;
 }
 
-int main(){
-Korab korabi[20]; 
-int count=0;
-do{cin>>op;
-switch(op){
-1) case 1:
+int main()
 {
-korabi[count]=Insert();
-count++;
-}break;
+	Ship ships[20]; 
+	int count=0;
+	do {
+		cin>>op;
+	switch(op)
+	{
+		case 1:
+		{
+			// 1 Вариянт въвеждане на 1 кораб 
+			ships[count]=Insert();
+			count++;
 
-2) do{
-korabi[count]=Insert();
-count++;
-cout<<"Enter new (Y/N)?";
-cin>>ch;
-}while(ch!='N');
+			// 2 Вариянт въвеждане на 1 кораб с въпрос за последващо въвеждане
+			do {
+				korabi[count]=Insert();
+				count++;
+				cout<<"Enter new (N)?";
+				cin>>ch;
+			} while(ch == 'N');
+		}
+		break;
+```
 
+# Генериране на случаини чила
 
+## Генериране на 0 или 1
+
+```c++
+int winer()
+{
+	int n = rand()%2;
+	return n;
+}
+```
+
+## Генерирне на големи цели числа
+
+```c++
+
+long long generatenumber()
+{
+	long long prefix = 3590000000;
+	return prefix + rand()%9999999 + 1;
+} 
+```
+
+## Генериране на 
+
+```
