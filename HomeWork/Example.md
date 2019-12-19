@@ -239,6 +239,16 @@ long long generatenumber()
 } 
 ```
 
-## Генериране на 
+## Генериране на числа с плаваща запетая
 
+```c++
+//Генерира случайно число в интервал [min-20%; max+10%]
+double result(double min, double max) 
+{
+	double fMin = min - (min * 20/100);
+	double fMax = max + (max * 10/100);
+	double random = (double)rand() / RAND_MAX;
+    	double result = fMin + random * (fMax - fMin);
+	return result;
+}
 ```
