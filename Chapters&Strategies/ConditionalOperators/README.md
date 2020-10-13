@@ -67,3 +67,6 @@ default :
     break;  
 }
 ```
+
+## Оператор Elvis
+
