@@ -132,3 +132,5 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
   a) Поставите символ за уведомление 
   
   б) преместете последното изречение на първо място
+  
+  SetConsoleOutputCP(
