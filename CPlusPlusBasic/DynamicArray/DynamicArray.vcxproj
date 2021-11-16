@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{7a82c830-5574-4447-9516-3c037dc10228}</ProjectGuid>
-    <RootNamespace>ArrayExample5</RootNamespace>
+    <ProjectGuid>{22ad3d71-b2bc-4bb6-8a71-25d4b946c281}</ProjectGuid>
+    <RootNamespace>DynamicArray</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ArrayExample5.cpp" />
+    <ClCompile Include="DynamicArray.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
