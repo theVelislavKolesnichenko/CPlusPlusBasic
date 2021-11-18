@@ -51,7 +51,7 @@ void updateArray(int a[], int count)
         //3 % 2 -> !1 -> false
         if((a[index] % 2) == 0) //!(a[index] % 2)
             a[index] = a[index] * 5;
-        else if (!(a[index] % 5)) {
+        else if ((a[index] % 5) == 0) {
             a[index] /= 5;
         }
     }

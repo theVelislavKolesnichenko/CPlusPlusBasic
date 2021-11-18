@@ -13,8 +13,10 @@ int main()
     cout << "Enter string: ";
     
     //cin >> str;
+    //cout << "cin >> " << str << endl;
+
     getline(cin, str);
-    cout << str << endl;
+    cout << "getline " << str << endl;
 
     cout << str[0] << endl;
     cout << str.length() << endl;
