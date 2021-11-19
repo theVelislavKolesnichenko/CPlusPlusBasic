@@ -13,27 +13,27 @@ int main()
 
 	bool result = search(a, length, n);
 
-	if (result) {
+	if (result)
+	{
 		cout << "exists" << endl;
 	}
-	else {
+	else
+	{
 		cout << "no exists" << endl;
 	}
 }
 
 bool search(int a[], int length, int n) 
 {
-	//bool exists = false;
 	int index = 0;
 	while (index < length)
 	{
-		if (a[index++] == n) {
-			//exists = true;
-			//break;
+		if (a[index] == n) {
 			return true;
 		}
+		index++;
 	}
-	return false;// exists;
+	return false;
 }
 
 bool searchv2(int a[], int length, int n)
