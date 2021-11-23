@@ -3,9 +3,23 @@ using namespace std;
 
 int main()
 {
-    int array[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
     char ch[] = { 'T', 'u', '-' };//4
+    char ch1[] = "Tu-Varna";//\0//9
+    char ch2[3] = "Tu";//\0
+    char ch3[6] = "Varna";//\0
+    char ch4[10];
 
-    cout << "array = " << array << endl;
-    cout << "array = " << ch << endl;
+    cout << "Enter characters:" << endl;
+    //cin >> ch4;
+    cin.get(ch4, 5);
+    //Достъп до елемент от масив
+    cout << endl << ch4[0] << endl;
+    cout << endl << ch4[4] << endl;
+    cout << endl << ch4[9] << endl;
+
+    //Извеждане на масив
+    cout << endl << ch1 << endl;
+    cout << endl << ch2 << endl;
+    cout << endl << ch3 << endl;
+    cout << endl << ch4 << endl;
 }

@@ -1,27 +1,30 @@
 #include <iostream>
 using namespace std;
 
-int sumEven(int a[], int count);
+int count(int a[], int length, int n);
 
 int main()
 {
-	int array[7] = { 1, 2, 3, 30, 1, 70, 4 };
+	const int length = 7;
+	int a[length] = { 1,2,3,30,1,70,4 };
+	int n;
+	cout << "Enter number: ";
+	cin >> n;
 
-	int sum = sumEven(array, 7);
+	bool result = count(a, length, n);
 
-	cout << "Sum of even number is: " << sum << endl;
+	cout << "Number " << n << " exists " << result << " times in the array" << endl;
 }
 
-int sumEven(int a[], int count) 
+int count(int a[], int length, int n)
 {
-	int sum = 0;
-
-	for (int index = 0; index < count; index++)
+	int index = 0;
+	while (index < length)
 	{
-		if (a[index] % 2 == 0) {
-			sum += a[index];
+		if (a[index] == n) {
+			return true;
 		}
+		index++;
 	}
-
-	return sum;
+	return false;
 }

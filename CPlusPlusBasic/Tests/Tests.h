@@ -7,3 +7,7 @@ void sub(double number1, double number2);
 void mul(double number1, double number2);
 
 void div(double number1, double number2);
+
+void printWithFor();
+
+void printWithWhile();
