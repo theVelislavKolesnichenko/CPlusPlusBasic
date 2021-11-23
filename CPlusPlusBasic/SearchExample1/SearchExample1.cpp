@@ -36,7 +36,38 @@ bool search(int a[], int length, int n)
 	return false;
 }
 
-bool searchv2(int a[], int length, int n)
+//int a[length] = { 1,2,3,30,1,70,4 }; 9
+bool search1(int a[], int length, int number)
+{
+	int i = 0;
+	do
+	{
+		if (a[i] == number)
+		{
+			return true;
+		}
+		i++;
+	} while (i < length);
+
+	return false;
+}
+
+bool search2(int a[], int length, int number)
+{
+
+	for (int i = 0; i < length; i++)
+	{
+		if (a[i] == number)
+		{
+			return true;
+		}
+	}
+
+	return false;
+}
+
+
+bool searchv3(int a[], int length, int n)
 {
 	while (0 <= --length)
 	{
@@ -45,4 +76,22 @@ bool searchv2(int a[], int length, int n)
 		}
 	}
 	return false;
+}
+
+//int a[length] = { 1,2,3,30,1,70,4 }; 9
+bool search4(int a[], int length, int number)
+{
+	bool exist = false;
+	int i = 0;
+	do
+	{
+		if (a[i] == number)
+		{
+			exist != exist;
+		}
+		else
+		{
+			i++;
+		}
+	} while (!exist || length > i);
 }

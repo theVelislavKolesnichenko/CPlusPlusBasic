@@ -3,7 +3,7 @@ using namespace std;
 
 struct Point {
     double x, y;
-    char A;
+    char symbol;
 };
 
 struct Line {
@@ -20,7 +20,7 @@ int main()
 {
     Line line = enterLine();
     printLine(line);
-    cout << " length of line is " << lineLength(line) << endl;
+    cout << "\n length of line is " << lineLength(line) << endl;
 
     cout << sizeof(Point) << endl;
     cout << sizeof(line) << endl;
@@ -28,7 +28,8 @@ int main()
 
 void printPoint(Point point)
 {
-    cout << "Point(" << point.x << "; " << point.y << ")";
+    cout << "Point(" << point.x 
+         << "; " << point.y << ")";
 }
 
 Point enterPoint()
@@ -36,7 +37,7 @@ Point enterPoint()
     cout << "Enter coordinate.X and Y: \n";
     Point point;
     cout << "Point value: ";
-    cin >> point.A;
+    cin >> point.symbol;
     cin >> point.x >> point.y;
 
     return point;
@@ -65,5 +66,7 @@ void printLine(Line line)
 
 double lineLength(Line line)
 {
-    return sqrt(pow(line.A.x - line.B.x, 2) + pow(line.A.y - line.B.y, 2));
+    return sqrt(
+        pow(line.A.x - line.B.x, 2) + 
+        pow(line.A.y - line.B.y, 2));
 }

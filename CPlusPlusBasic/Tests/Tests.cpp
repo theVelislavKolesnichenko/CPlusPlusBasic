@@ -1,12 +1,3 @@
-/*
-Съставете програма с функция за въвеждане на реално число.
-Функцията не връща стойност.Функцията приема като входен параметър
-адреса на променлива от реален тип данни.На подадената променлива като
-входен параметър се присвоява реално число, въведено от клавиатурата.
-Main функцията дефинира променлива от реален тип с начална стойност 0,
-извежда стойността на променливата преди и след извикването на функцията
-*/
-
 #include <iostream>
 using namespace std;
 
@@ -14,17 +5,32 @@ void enter(double& number);
 
 int main()
 {
-	double x = 0;
+	char c[10];
 
-	cout << "Start value of x: " << x << endl;
+	cin.getline(c, 5);
 
-	enter(x);
+	cout << sizeof(c) / sizeof(*c) << endl;
 
-	cout << "New value of x: " << x << endl;
-}
+	int i = 0;
 
-void enter(double& number) 
-{
-	cout << "Enter number: ";
-	cin >> number;
+	while (c[i] != '\0')
+	{
+		i++;
+	}
+
+	cout << i << endl;
+	int start = false;
+	for (int i = 9; i >= 0; i--)
+	{
+		if (start)
+		{
+			cout << (int)c[i] << endl;
+		}
+		else if (c[i] == '\0') 
+		{
+			start = true;
+		}
+	}
+
+	cout << strlen(c) << endl;
 }
