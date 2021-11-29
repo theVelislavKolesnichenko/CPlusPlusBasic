@@ -8,13 +8,14 @@ void array_print(int arr[], int size);
 
 int main()
 {
-    int arr[50];
-    array_in(arr, 50);
+    const int lenght = 50;
+    int arr[lenght];
+    array_in(arr, lenght);
     cout << "Print \n";
-    array_print(arr, 50);
-    array_sort(arr, 50);
+    array_print(arr, lenght);
+    array_sort(arr, lenght);
     cout << "Sorted \n";
-    array_print(arr, 50);
+    array_print(arr, lenght);
     return 0;
 }
 
@@ -39,7 +40,9 @@ void array_in(int arr[], int size)
     srand(time(0));
     for (int i = 0; i < size; i++) 
     {
-        arr[i] = rand() % 100 + 1;
+        //[1;100]
+        //f = a*x^2 + bx + c = 0 
+        arr[i] = 1 + rand() % 100;
     }
 
 }
