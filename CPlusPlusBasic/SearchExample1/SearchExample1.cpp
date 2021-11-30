@@ -66,7 +66,6 @@ bool search2(int a[], int length, int number)
 	return false;
 }
 
-
 bool searchv3(int a[], int length, int n)
 {
 	while (0 <= --length)
