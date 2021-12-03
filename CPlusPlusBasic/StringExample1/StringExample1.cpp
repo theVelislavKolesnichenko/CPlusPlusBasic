@@ -9,10 +9,10 @@ int main()
     cout << str << endl;
     cout << sizeof(str) << endl;
     str = "TU-Varna TU-Varna TU-Varna TU-Varna";
-    cout << str << ":" << str.length() << endl;
+    cout << str << " : " << str.length() << endl;
 
     str = "TU";
-    cout << str << ":" << str.length() << endl;
+    cout << str << " : " << str.length() << endl;
 
     cout << "Enter string: ";
     

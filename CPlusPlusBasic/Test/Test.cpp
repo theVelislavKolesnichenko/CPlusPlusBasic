@@ -2,7 +2,8 @@
 #include "Test.h"
 using namespace std;
 
-long sum(int array[], int length);
+long sum_v1(int array[], int length);
+long sum_v2(int array[], int length);
 
 int main()
 {
@@ -39,12 +40,26 @@ int main()
 		<< value << endl;
 }
 
-long sum(int array[], int length) 
+long sum_v1(int array[], int length) 
 {
 	long sum = 0;
 	for (int i = 0; i < length; i++)
 	{
 		if (array[i] < 0 && array[i] % 2 == 0 && (array[i] < -999 || array[i] > -333))
+		{
+			sum += array[i];
+		}
+	}
+	return sum;
+}
+
+
+long sum_v2(int array[], int length)
+{
+	long sum = 0;
+	for (int i = 0; i < length; i++)
+	{
+		if (array[i] < 0 && array[i] % 2 == 0 && !(array[i] >= -999 && array[i] <= -333))
 		{
 			sum += array[i];
 		}

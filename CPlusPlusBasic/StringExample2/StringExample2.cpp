@@ -10,15 +10,18 @@ int main()
 
 	cout << "Дължината на масива е: " << strlen(text) << endl;
 
-	char copy[19];
-	cout << "Стойноста на cppy e: " << strcpy_s(copy, text) << endl;
+	cout << "Разнера масива е: " << sizeof(text) << endl;
 
-	cout << "copy[19] равно ли е на text[9]" << strcmp(copy, text) << endl;
+	char copy[19];
+	strcpy_s(copy, text);
+	cout << "Стойноста на cppy e: " << copy << endl;
+
+	cout << "copy[19] равно ли е на text[9]: " << strcmp(copy, text) << endl;
 	char cpm[19] = "TU-varna";
-	cout << "cpm[19](\"TU - varna\" равно ли е на text[9]" << strcmp(copy, text) << endl;
+	cout << "cpm[19] \"TU-varna\" равно ли е на text[9]: " << strcmp(copy, text) << endl;
 
 	cout << "copy[19] равно ли е на text[9]" << _stricmp(copy, text) << endl;
-	cout << "cpm[19](\"TU - varna\" равно ли е на text[9]" << _stricmp(copy, text) << endl;
+	cout << "cpm[19] \"TU-varna\" равно ли е на text[9]: " << _stricmp(copy, text) << endl;
 
 	_strupr_s(text, sizeof(text));
 	cout << "Големи букви: " << text << endl;

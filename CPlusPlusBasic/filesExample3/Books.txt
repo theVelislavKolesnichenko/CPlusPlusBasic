@@ -1,0 +1,12 @@
+Title_1
+Author_1
+45
+1.85
+Title_2
+Author_1
+95
+2.5
+Title_3
+Author_2
+97
+3.2
