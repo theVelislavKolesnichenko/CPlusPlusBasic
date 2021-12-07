@@ -10,8 +10,10 @@ int main()
 
     int index = searchIndexOfMaxValue(array, count);
 
-    cout << "Max value is " << array[index]
-        << "\n number of index is " << index << endl;
+    cout << "Max value is " 
+         << array[index]
+         << "\n number of index is " 
+         << index << endl;
 }
 
 int searchIndexOfMaxValue(int a[], int count) 

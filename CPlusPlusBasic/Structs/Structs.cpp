@@ -20,7 +20,8 @@ int main()
 {
     Line line = enterLine();
     printLine(line);
-    cout << "\n length of line is " << lineLength(line) << endl;
+    cout << "\n length of line is " 
+         << lineLength(line) << endl;
 
     cout << sizeof(Point) << endl;
     cout << sizeof(line) << endl;

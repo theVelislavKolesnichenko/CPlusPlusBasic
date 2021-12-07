@@ -13,7 +13,12 @@ int main()
 
 	int result = count(a, sizeof(a) / sizeof(*a), n);
 
-	cout << "Number " << n << " exists " << result << " times in the array" << endl;
+	cout << "Number " 
+		 << n 
+		 << " exists " 
+		 << result 
+		 << " times in the array" 
+		 << endl;
 }
 
 int count(int a[], int length, int n)

@@ -28,7 +28,8 @@ bool search(int a[], int length, int n)
 	int index = 0;
 	while (index < length)
 	{
-		if (a[index] == n) {
+		if (a[index] == n) 
+		{
 			return true;
 		}
 		index++;

@@ -14,19 +14,21 @@ struct Line {
 void printPoint(Point point);
 Point enterPoint();
 Line enterLine();
-void enterLines(Line line[], int size);
+void enterLines(Line line[], int start, int size);
+int enterLine(Line  line[], int i);
 void printLine(Line line);
 void printLines(Line line[], int size);
 double lineLength(Line line);
 void sortLines(Line line[], int size);
 double random(double min, double max);
 char randomSymbol();
+
 int main()
 {
     const int size = 10;
     Line line[size];
 
-    enterLines(line, size);
+    enterLines(line, 0, size);
     
     printLines(line, size);
 
@@ -35,23 +37,31 @@ int main()
     printLines(line, size);
 }
 
-void enterLines(Line line[], int size) 
+void enterLines(Line line[], int start, int size)
 {
     //[-65;74]
     srand(time(0));
-    for (int i = 0; i < size; i++)
+    for (int i = start; i < size; i++)
     {
-        double min = -65;
-        double max = 74;
-
-        line[i].A.symbol = randomSymbol();
-        line[i].A.x = random(min, max);
-        line[i].A.y = random(min, max);
-
-        line[i].B.symbol = randomSymbol();
-        line[i].B.x = random(min, max);
-        line[i].B.y = random(min, max);
+        enterLine(line, i);
     }
+}
+
+
+int enterLine(Line line[], int i)
+{
+    double min = -65;
+    double max = 74;
+
+    line[i].A.symbol = randomSymbol();
+    line[i].A.x = random(min, max);
+    line[i].A.y = random(min, max);
+
+    line[i].B.symbol = randomSymbol();
+    line[i].B.x = random(min, max);
+    line[i].B.y = random(min, max);
+
+    return i+1;
 }
 
 char randomSymbol()
@@ -80,8 +90,8 @@ void printLines(Line line[], int size)
 double lineLength(Line line)
 {
     return sqrt(
-        pow(line.A.x - line.B.x, 2) +
-        pow(line.A.y - line.B.y, 2));
+        pow((line.A.x - line.B.x), 2) +
+        pow((line.A.y - line.B.y), 2));
 }
 
 void sortLines(Line line[], int size) 
