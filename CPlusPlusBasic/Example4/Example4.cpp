@@ -65,7 +65,7 @@ int main()
 
         switch (choice)
         {
-        case 1: 
+        case 1:
         {
             in(containers, count);
         }
@@ -90,7 +90,7 @@ int main()
         {
             Container container = minCapacity(containers, count);
             out(container);
-            
+
             //int index = indexOfMinCapacity(containers, count);
             //out(containers[index]);
             system("pause");
@@ -110,7 +110,7 @@ int main()
         {
             Container container = minWeight(containers, count);
             out(container);
-            
+
             /*int index = indexOfMinWeight(containers, count);
             out(containers[index]);*/
 
@@ -138,7 +138,7 @@ int main()
     return 0;
 }
 
-void in(Container containers[], int size) 
+void in(Container containers[], int size)
 {
     for (int i = 0; i < size; i++)
     {
@@ -151,7 +151,7 @@ void in(Container containers[], int size)
     }
 }
 
-void out(Container containers[], int size) 
+void out(Container containers[], int size)
 {
     for (int i = 0; i < size; i++)
     {
@@ -159,7 +159,7 @@ void out(Container containers[], int size)
     }
 }
 
-void out(Container containers) 
+void out(Container containers)
 {
     cout << "Enter number: " << containers.number;
     cout << "\nEnter capacity: " << containers.capacity;
@@ -167,12 +167,12 @@ void out(Container containers)
     cout << "\nUsed weight: " << containers.capacity - containers.weight << endl;
 }
 
-Container maxCapacity(Container containers[], int size) 
+Container maxCapacity(Container containers[], int size)
 {
     Container containerWithMaxCapacity = containers[0];
     for (int i = 1; i < size; i++)
     {
-        if (containerWithMaxCapacity.capacity < containers[i].capacity) 
+        if (containerWithMaxCapacity.capacity < containers[i].capacity)
         {
             containerWithMaxCapacity = containers[i];
         }
@@ -180,7 +180,7 @@ Container maxCapacity(Container containers[], int size)
     return containerWithMaxCapacity;
 }
 
-Container minCapacity(Container containers[], int size) 
+Container minCapacity(Container containers[], int size)
 {
     Container containerWithMinCapacity = containers[0];
     for (int i = 1; i < size; i++)
@@ -193,7 +193,7 @@ Container minCapacity(Container containers[], int size)
     return containerWithMinCapacity;
 }
 
-Container maxWeight(Container containers[], int size) 
+Container maxWeight(Container containers[], int size)
 {
     Container containerWithMaxWeight = containers[0];
     for (int i = 1; i < size; i++)
@@ -206,7 +206,7 @@ Container maxWeight(Container containers[], int size)
     return containerWithMaxWeight;
 }
 
-Container minWeight(Container containers[], int size) 
+Container minWeight(Container containers[], int size)
 {
     Container containerWithMinWeight = containers[0];
     for (int i = 1; i < size; i++)
@@ -222,7 +222,7 @@ Container minWeight(Container containers[], int size)
 /*
 Съставете Функция за сортиране на контейнерите по полезно тегло въввъзходящ ред (полезното тегло е разликата от товарен капацитет и натоварено тегло)
 */
-void sort(Container containers[], int size) 
+void sort(Container containers[], int size)
 {
     double sum1, sum2;
     Container temp;
@@ -232,7 +232,7 @@ void sort(Container containers[], int size)
         {
             sum1 = containers[j].capacity - containers[j].weight;
             sum2 = containers[j + 1].capacity - containers[j + 1].weight;
-            if (sum1 > sum2) 
+            if (sum1 > sum2)
             {
                 temp = containers[j];
                 containers[j] = containers[j + 1];
@@ -242,7 +242,7 @@ void sort(Container containers[], int size)
     }
 }
 
-int indexOfMaxCapacity(Container containers[], int size) 
+int indexOfMaxCapacity(Container containers[], int size)
 {
     int indexOfContainerWithMaxCapacity = 0;
     for (int i = 1; i < size; i++)

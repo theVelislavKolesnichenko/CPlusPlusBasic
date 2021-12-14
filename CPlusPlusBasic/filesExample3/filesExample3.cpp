@@ -4,6 +4,9 @@
 using namespace std;
 
 struct Book {
+	int number;
+	int count;
+
 	char title[50];
 	char author[50];
 	int pages;
@@ -19,6 +22,7 @@ void bookBinaryFileRead(Book books[]);
 void bookTextFileSave(Book books[], int count);
 void bookTextFileRead(Book books[]);
 void bookSort(Book books[], int count);
+void sale(Book books[], int count);
 
 int main()
 {
@@ -32,6 +36,7 @@ int main()
 		cout << "5. Save Books in text file" << endl;
 		cout << "6. Read Books from text file" << endl;
 		cout << "7. Sort array" << endl;
+		cout << "8. Sale book" << endl;
 		cout << "0. Exit" << endl;
 		cout << "Select option: ";
 		cin >> op;
@@ -79,6 +84,12 @@ int main()
 			system("pause");
 		}
 		break;
+		case 8:
+		{
+			sale(newBooks, booksCount);
+			system("pause");
+		}
+		break;
 		case 0:
 		{
 			cout << "Exit with <y> : ";
@@ -104,13 +115,16 @@ int main()
 void bookIn(Book books[], int count)
 {
 	cout << "1. Enter Books" << endl;
+	srand(time(0));
 	for (int i = 0; i < count; i++)
 	{
-		cin.ignore();
-		cout << "Enter Title "; cin.getline(books[i].title, 50);
-		cout << "Enter Author "; cin.getline(books[i].author, 50);
+		//cin.ignore();
+		cout << "Enter number "; cin >> books[i].number;
+		cout << "Enter title "; cin.getline(books[i].title, 50);
+		cout << "Enter author "; cin.getline(books[i].author, 50);
 		cout << "Enter pages "; cin >> books[i].pages;
 		cout << "Enter price "; cin >> books[i].pice;
+		cout << "Enter count "; books[i].count = 1 + rand() % 50;
 	}
 }
 
@@ -120,10 +134,12 @@ void bookOut(Book books[], int count)
 	for (int i = 0; i < count; i++)
 	{
 		cout << "Book " << i << endl;
+		cout << "Number: " << books[i].number << endl;
 		cout << "Title: " << books[i].title << endl;
 		cout << "Author: " << books[i].author << endl;
 		cout << "Pages: " << books[i].pages << endl;
 		cout << "Price: " << books[i].pice << endl;
+		cout << "Count: " << books[i].count << endl;
 	}
 }
 
@@ -199,5 +215,24 @@ void bookSort(Book books[], int count)
 			}
 		}
 	}
+}
 
+void sale(Book books[], int count) 
+{
+	cout << "8. Sale book" << endl;
+	cout << "Enter number ";
+	int number;
+	cin >> number;
+
+	for (int i = 0; i < count; i++)
+	{
+		if (books[i].number == number) 
+		{
+			if (books[i].count > 0)
+			{
+				books[i].count--;
+			}
+			break;
+		}
+	}
 }

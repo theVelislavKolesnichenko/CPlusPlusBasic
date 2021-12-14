@@ -2,9 +2,9 @@
 #include <string>
 #include <iomanip>
 #include <time.h>
- 
+
 using namespace std;
- 
+
 struct Athlete {
     char name[50];
     int rating[5];
@@ -17,7 +17,7 @@ int max(Athlete athlets[], int size);
 int min(Athlete athlets[], int size);
 void sort(Athlete athlets[], int size);
 double avg(int rating[], int size);
- 
+
 int main()
 {
     setlocale(LC_ALL, "BG");
@@ -82,13 +82,13 @@ int main()
             break;
         }
         }
- 
+
     } while (choice != 'y');
- 
+
     return 0;
 }
- 
-void in(Athlete athlets[], int size) 
+
+void in(Athlete athlets[], int size)
 {
     srand(time(0));
     for (int i = 0; i < size; i++)
@@ -127,12 +127,12 @@ void out(Athlete athlets)
     cout << "Avg: " << avg(athlets.rating, 5) << endl;
 }
 
-int max(Athlete athlets[], int size) 
+int max(Athlete athlets[], int size)
 {
     int index = 0;
     for (int i = 0; i < 5; i++)
     {
-        if (avg(athlets[i].rating, 5) > avg(athlets[index].rating, 5)) 
+        if (avg(athlets[i].rating, 5) > avg(athlets[index].rating, 5))
         {
             index = i;
         }
@@ -141,7 +141,7 @@ int max(Athlete athlets[], int size)
     return index;
 }
 
-int min(Athlete athlets[], int size) 
+int min(Athlete athlets[], int size)
 {
     int index = 0;
     for (int i = 0; i < 5; i++)
@@ -155,7 +155,7 @@ int min(Athlete athlets[], int size)
     return index;
 }
 
-void sort(Athlete athlets[], int size) 
+void sort(Athlete athlets[], int size)
 {
     for (int i = 0; i < size - 1; i++)
     {
@@ -171,7 +171,7 @@ void sort(Athlete athlets[], int size)
     }
 }
 
-double avg(int rating[], int size) 
+double avg(int rating[], int size)
 {
     double sum = 0;
     for (int i = 0; i < 5; i++)
