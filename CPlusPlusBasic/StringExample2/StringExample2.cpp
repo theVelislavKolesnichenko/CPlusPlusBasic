@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 using namespace std;
 
@@ -8,29 +8,29 @@ int main()
 
 	char text[] = {'T', 'u', '-', 'V', 'a', 'r', 'n', 'a', '\0'};
 
-	cout << "Äúëæèíàòà íà ìàñèâà å: " << strlen(text) << endl;
+	cout << "Ð”ÑŠÐ»Ð¶Ð¸Ð½Ð°Ñ‚Ð° Ð½Ð° Ð¼Ð°ÑÐ¸Ð²Ð° Ðµ: " << strlen(text) << endl;
 
-	cout << "Ðàçíåðà ìàñèâà å: " << sizeof(text) << endl;
+	cout << "Ð Ð°Ð·Ð½ÐµÑ€Ð° Ð¼Ð°ÑÐ¸Ð²Ð° Ðµ: " << sizeof(text) << endl;
 
 	char copy[19];
 	strcpy_s(copy, text);
-	cout << "Ñòîéíîñòà íà cppy e: " << copy << endl;
+	cout << "Ð¡Ñ‚Ð¾Ð¹Ð½Ð¾ÑÑ‚Ð° Ð½Ð° cppy e: " << copy << endl;
 
-	cout << "copy[19] ðàâíî ëè å íà text[9]: " << strcmp(copy, text) << endl;
+	cout << "copy[19] Ñ€Ð°Ð²Ð½Ð¾ Ð»Ð¸ Ðµ Ð½Ð° text[9]: " << strcmp(copy, text) << endl;
 	char cpm[19] = "TU-varna";
-	cout << "cpm[19] \"TU-varna\" ðàâíî ëè å íà text[9]: " << strcmp(copy, text) << endl;
+	cout << "cpm[19] \"TU-varna\" Ñ€Ð°Ð²Ð½Ð¾ Ð»Ð¸ Ðµ Ð½Ð° text[9]: " << strcmp(copy, text) << endl;
 
-	cout << "copy[19] ðàâíî ëè å íà text[9]" << _stricmp(copy, text) << endl;
-	cout << "cpm[19] \"TU-varna\" ðàâíî ëè å íà text[9]: " << _stricmp(copy, text) << endl;
+	cout << "copy[19] Ñ€Ð°Ð²Ð½Ð¾ Ð»Ð¸ Ðµ Ð½Ð° text[9]" << _stricmp(copy, text) << endl;
+	cout << "cpm[19] \"TU-varna\" Ñ€Ð°Ð²Ð½Ð¾ Ð»Ð¸ Ðµ Ð½Ð° text[9]: " << _stricmp(copy, text) << endl;
 
 	_strupr_s(text, sizeof(text));
-	cout << "Ãîëåìè áóêâè: " << text << endl;
+	cout << "Ð“Ð¾Ð»ÐµÐ¼Ð¸ Ð±ÑƒÐºÐ²Ð¸: " << text << endl;
 	_strlwr_s(text, sizeof(text));
-	cout << "Ìàëêè áóêâè: " << text << endl;
+	cout << "ÐœÐ°Ð»ÐºÐ¸ Ð±ÑƒÐºÐ²Ð¸: " << text << endl;
 
 	char cat[30] = "University ";
 	strcat_s(cat, text);
-	cout << "Ñòîéíîñòà íà cat e: " << cat << endl;
+	cout << "Ð¡Ñ‚Ð¾Ð¹Ð½Ð¾ÑÑ‚Ð° Ð½Ð° cat e: " << cat << endl;
 
 }
 

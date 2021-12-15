@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 struct Room {
@@ -29,19 +29,19 @@ int main()
 	do
 	{
 		system("cls");
-		cout << " 1. Âúâåäåòå äàííèòå çà ñòàèòå\n"
-			<< " 2. Èçâåäåòå äàííèòå çà ñòàèòå\n"
-			<< " 3. Èçâåäåòå ñòàèòå ñ êàïàöèòåï 1\n"
-			<< " 4. Èçâåäåòå ñòàèòå ñ êàïàöèòåï 2\n"
-			<< " 5. Èìà ëè êëèìàòèê â ñòàÿòà 1\n"
-			<< " 6. Èìà ëè êëèìàòèê â ñòàÿòà 2\n"
-			<< " 7. Èìà ëè êëèìàòèê â ñòàÿòà 3\n"
-			<< " 8. Èìà ëè êëèìàòèê â ñòàÿòà 4\n"
-			<< " 9. Ïðîìÿíà íà öåíàòà çà íîùóâêà 1\n"
-			<< "10. Ïðîìÿíà íà öåíàòà çà íîùóâêà 2\n"
-			<< "11.Ïîäðåæäàíå ïî öåíà\n"
-			<< "12. Èçëèçàíå\n"
-			<< "Èçáåðåòå (1 - 12): ";
+		cout << " 1. Ð’ÑŠÐ²ÐµÐ´ÐµÑ‚Ðµ Ð´Ð°Ð½Ð½Ð¸Ñ‚Ðµ Ð·Ð° ÑÑ‚Ð°Ð¸Ñ‚Ðµ\n"
+			<< " 2. Ð˜Ð·Ð²ÐµÐ´ÐµÑ‚Ðµ Ð´Ð°Ð½Ð½Ð¸Ñ‚Ðµ Ð·Ð° ÑÑ‚Ð°Ð¸Ñ‚Ðµ\n"
+			<< " 3. Ð˜Ð·Ð²ÐµÐ´ÐµÑ‚Ðµ ÑÑ‚Ð°Ð¸Ñ‚Ðµ Ñ ÐºÐ°Ð¿Ð°Ñ†Ð¸Ñ‚ÐµÐ¿ 1\n"
+			<< " 4. Ð˜Ð·Ð²ÐµÐ´ÐµÑ‚Ðµ ÑÑ‚Ð°Ð¸Ñ‚Ðµ Ñ ÐºÐ°Ð¿Ð°Ñ†Ð¸Ñ‚ÐµÐ¿ 2\n"
+			<< " 5. Ð˜Ð¼Ð° Ð»Ð¸ ÐºÐ»Ð¸Ð¼Ð°Ñ‚Ð¸Ðº Ð² ÑÑ‚Ð°ÑÑ‚Ð° 1\n"
+			<< " 6. Ð˜Ð¼Ð° Ð»Ð¸ ÐºÐ»Ð¸Ð¼Ð°Ñ‚Ð¸Ðº Ð² ÑÑ‚Ð°ÑÑ‚Ð° 2\n"
+			<< " 7. Ð˜Ð¼Ð° Ð»Ð¸ ÐºÐ»Ð¸Ð¼Ð°Ñ‚Ð¸Ðº Ð² ÑÑ‚Ð°ÑÑ‚Ð° 3\n"
+			<< " 8. Ð˜Ð¼Ð° Ð»Ð¸ ÐºÐ»Ð¸Ð¼Ð°Ñ‚Ð¸Ðº Ð² ÑÑ‚Ð°ÑÑ‚Ð° 4\n"
+			<< " 9. ÐŸÑ€Ð¾Ð¼ÑÐ½Ð° Ð½Ð° Ñ†ÐµÐ½Ð°Ñ‚Ð° Ð·Ð° Ð½Ð¾Ñ‰ÑƒÐ²ÐºÐ° 1\n"
+			<< "10. ÐŸÑ€Ð¾Ð¼ÑÐ½Ð° Ð½Ð° Ñ†ÐµÐ½Ð°Ñ‚Ð° Ð·Ð° Ð½Ð¾Ñ‰ÑƒÐ²ÐºÐ° 2\n"
+			<< "11.ÐŸÐ¾Ð´Ñ€ÐµÐ¶Ð´Ð°Ð½Ðµ Ð¿Ð¾ Ñ†ÐµÐ½Ð°\n"
+			<< "12. Ð˜Ð·Ð»Ð¸Ð·Ð°Ð½Ðµ\n"
+			<< "Ð˜Ð·Ð±ÐµÑ€ÐµÑ‚Ðµ (1 - 12): ";
 
 		cin >> option;
 		system("cls");
@@ -63,7 +63,7 @@ int main()
 		case 3:
 		{
 			int capacity;
-			cout << "Âúâåäåòå êàïàöèòåò çà ñàòÿ: ";
+			cout << "Ð’ÑŠÐ²ÐµÐ´ÐµÑ‚Ðµ ÐºÐ°Ð¿Ð°Ñ†Ð¸Ñ‚ÐµÑ‚ Ð·Ð° ÑÐ°Ñ‚Ñ: ";
 			cin >> capacity;
 			outByCapacity(capacity, rooms, length);
 			system("pause");
@@ -78,7 +78,7 @@ int main()
 		case 5:
 		{
 			int number;
-			cout << "Âúâåäåòå íîìåð ñàòÿ: ";
+			cout << "Ð’ÑŠÐ²ÐµÐ´ÐµÑ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÐ°Ñ‚Ñ: ";
 			cin >> number;
 			outWithAC(number, rooms, length);
 			system("pause");
@@ -93,18 +93,18 @@ int main()
 		case 7:
 		{
 			int number;
-			cout << "Âúâåäåòå íîìåð ñàòÿ: ";
+			cout << "Ð’ÑŠÐ²ÐµÐ´ÐµÑ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÐ°Ñ‚Ñ: ";
 			cin >> number;
 			if (isWithAC(number, rooms, length))
 			{
-				cout << "Ñòàÿòà ñ íîìåð: "
-					<< number << "èìà êëèìàòèê"
+				cout << "Ð¡Ñ‚Ð°ÑÑ‚Ð° Ñ Ð½Ð¾Ð¼ÐµÑ€: "
+					<< number << "Ð¸Ð¼Ð° ÐºÐ»Ð¸Ð¼Ð°Ñ‚Ð¸Ðº"
 					<< endl;
 			}
 			else
 			{
-				cout << "Ñòàÿòà ñ íîìåð: "
-					<< number << "íÿìà êëèìàòèê"
+				cout << "Ð¡Ñ‚Ð°ÑÑ‚Ð° Ñ Ð½Ð¾Ð¼ÐµÑ€: "
+					<< number << "Ð½ÑÐ¼Ð° ÐºÐ»Ð¸Ð¼Ð°Ñ‚Ð¸Ðº"
 					<< endl;
 			}
 			system("pause");
@@ -114,14 +114,14 @@ int main()
 		{
 			if (isWithAC(rooms, length))
 			{
-				cout << "Ñòàÿòà ñ íîìåð: "
-					<< "èìà êëèìàòèê"
+				cout << "Ð¡Ñ‚Ð°ÑÑ‚Ð° Ñ Ð½Ð¾Ð¼ÐµÑ€: "
+					<< "Ð¸Ð¼Ð° ÐºÐ»Ð¸Ð¼Ð°Ñ‚Ð¸Ðº"
 					<< endl;
 			}
 			else
 			{
-				cout << "Ñòàÿòà ñ íîìåð: "
-					<< "íÿìà êëèìàòèê"
+				cout << "Ð¡Ñ‚Ð°ÑÑ‚Ð° Ñ Ð½Ð¾Ð¼ÐµÑ€: "
+					<< "Ð½ÑÐ¼Ð° ÐºÐ»Ð¸Ð¼Ð°Ñ‚Ð¸Ðº"
 					<< endl;
 			}
 			system("pause");
@@ -130,7 +130,7 @@ int main()
 		case 9:
 		{
 			int number;
-			cout << "Âúâåäåòå íîìåð ñàòÿ: ";
+			cout << "Ð’ÑŠÐ²ÐµÐ´ÐµÑ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÐ°Ñ‚Ñ: ";
 			cin >> number;
 			editPrice(number, rooms, length);
 			system("pause");
@@ -148,7 +148,7 @@ int main()
 		}
 		break;
 		default:
-			cout << "Íåâàëèäåí èçáîð! Èçáåðåòå îòíîâî\n";
+			cout << "ÐÐµÐ²Ð°Ð»Ð¸Ð´ÐµÐ½ Ð¸Ð·Ð±Ð¾Ñ€! Ð˜Ð·Ð±ÐµÑ€ÐµÑ‚Ðµ Ð¾Ñ‚Ð½Ð¾Ð²Ð¾\n";
 			break;
 		}
 	} while (option != 12);
@@ -160,14 +160,14 @@ void in(Room rooms[], int length)
 {
 	for (int i = 0; i < length; i++)
 	{
-		cout << "Âúâåäåòå äàííè çà ñòàÿ " << i + 1 << endl;
-		cout << "Íîìåð: ";
+		cout << "Ð’ÑŠÐ²ÐµÐ´ÐµÑ‚Ðµ Ð´Ð°Ð½Ð½Ð¸ Ð·Ð° ÑÑ‚Ð°Ñ " << i + 1 << endl;
+		cout << "ÐÐ¾Ð¼ÐµÑ€: ";
 		cin >> rooms[i].number;
-		cout << "Êàïàöèòåò: ";
+		cout << "ÐšÐ°Ð¿Ð°Ñ†Ð¸Ñ‚ÐµÑ‚: ";
 		cin >> rooms[i].capacity;
-		cout << "Èìà ëè êëèìàòèê: ";
+		cout << "Ð˜Ð¼Ð° Ð»Ð¸ ÐºÐ»Ð¸Ð¼Ð°Ñ‚Ð¸Ðº: ";
 		cin >> rooms[i].hasAC;
-		cout << "Öåíà: ";
+		cout << "Ð¦ÐµÐ½Ð°: ";
 		cin >> rooms[i].price;
 	}
 }
@@ -182,26 +182,26 @@ void out(Room rooms[], int length)
 
 void out(Room room)
 {
-	cout << "Äàííè çà ñòàÿ ñ "
-		<< "íîìåð: " << room.number;
-	cout << "\nÊàïàöèòåò: " << room.capacity;
+	cout << "Ð”Ð°Ð½Ð½Ð¸ Ð·Ð° ÑÑ‚Ð°Ñ Ñ "
+		<< "Ð½Ð¾Ð¼ÐµÑ€: " << room.number;
+	cout << "\nÐšÐ°Ð¿Ð°Ñ†Ð¸Ñ‚ÐµÑ‚: " << room.capacity;
 
 	if (room.hasAC)
 	{
-		cout << "\nÑòàÿòà å ñ êëèìàòèê";
+		cout << "\nÐ¡Ñ‚Ð°ÑÑ‚Ð° Ðµ Ñ ÐºÐ»Ð¸Ð¼Ð°Ñ‚Ð¸Ðº";
 	}
 	else
 	{
-		cout << "\nÑòàÿòà å áåç êëèìàòèê";
+		cout << "\nÐ¡Ñ‚Ð°ÑÑ‚Ð° Ðµ Ð±ÐµÐ· ÐºÐ»Ð¸Ð¼Ð°Ñ‚Ð¸Ðº";
 	}
 
-	cout << "\nÖåíà: " << room.price << "ëâ\n";
+	cout << "\nÐ¦ÐµÐ½Ð°: " << room.price << "Ð»Ð²\n";
 }
 
 void outByCapacity(int capacity, Room rooms[], int length)
 {
-	cout << "Ñòàéòå ñ êàïàöèòåò: "
-		<< capacity << "ñà:" << endl;
+	cout << "Ð¡Ñ‚Ð°Ð¹Ñ‚Ðµ Ñ ÐºÐ°Ð¿Ð°Ñ†Ð¸Ñ‚ÐµÑ‚: "
+		<< capacity << "ÑÐ°:" << endl;
 	for (int i = 0; i < length; i++)
 	{
 		if (capacity == rooms[i].capacity)
@@ -215,9 +215,9 @@ void outByCapacity(int capacity, Room rooms[], int length)
 void outByCapacity(Room rooms[], int length)
 {
 	int capacity;
-	cout << "Âúâåäåòå êàïàöèòåò çà ñàòÿ: ";
+	cout << "Ð’ÑŠÐ²ÐµÐ´ÐµÑ‚Ðµ ÐºÐ°Ð¿Ð°Ñ†Ð¸Ñ‚ÐµÑ‚ Ð·Ð° ÑÐ°Ñ‚Ñ: ";
 	cin >> capacity;
-	cout << "Ñòàéòå ñ òîçè êàïàöèòåò ñà: \n";
+	cout << "Ð¡Ñ‚Ð°Ð¹Ñ‚Ðµ Ñ Ñ‚Ð¾Ð·Ð¸ ÐºÐ°Ð¿Ð°Ñ†Ð¸Ñ‚ÐµÑ‚ ÑÐ°: \n";
 	for (int i = 0; i < length; i++)
 	{
 		if (capacity == rooms[i].capacity)
@@ -230,18 +230,18 @@ void outByCapacity(Room rooms[], int length)
 
 void outWithAC(int number, Room rooms[], int length)
 {
-	cout << "Ñòàÿòà ñ íîìåð: " << number;
+	cout << "Ð¡Ñ‚Ð°ÑÑ‚Ð° Ñ Ð½Ð¾Ð¼ÐµÑ€: " << number;
 	for (int i = 0; i < length; i++)
 	{
 		if (rooms[i].number == number)
 		{
 			if (rooms[i].hasAC)
 			{
-				cout << " èìà êëèìàòèê" << endl;
+				cout << " Ð¸Ð¼Ð° ÐºÐ»Ð¸Ð¼Ð°Ñ‚Ð¸Ðº" << endl;
 			}
 			else
 			{
-				cout << " íÿìà êëèìàòèê" << endl;
+				cout << " Ð½ÑÐ¼Ð° ÐºÐ»Ð¸Ð¼Ð°Ñ‚Ð¸Ðº" << endl;
 			}
 			break;
 		}
@@ -251,20 +251,20 @@ void outWithAC(int number, Room rooms[], int length)
 void outWithAC(Room rooms[], int length)
 {
 	int number;
-	cout << "Âúâåäåòå íîìåð ñàòÿ: ";
+	cout << "Ð’ÑŠÐ²ÐµÐ´ÐµÑ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÐ°Ñ‚Ñ: ";
 	cin >> number;
-	cout << "Ñòàÿòà ñ íîìåð: " << number;
+	cout << "Ð¡Ñ‚Ð°ÑÑ‚Ð° Ñ Ð½Ð¾Ð¼ÐµÑ€: " << number;
 	for (int i = 0; i < length; i++)
 	{
 		if (rooms[i].number == number)
 		{
 			if (rooms[i].hasAC)
 			{
-				cout << " èìà êëèìàòèê" << endl;
+				cout << " Ð¸Ð¼Ð° ÐºÐ»Ð¸Ð¼Ð°Ñ‚Ð¸Ðº" << endl;
 			}
 			else
 			{
-				cout << " íÿìà êëèìàòèê" << endl;
+				cout << " Ð½ÑÐ¼Ð° ÐºÐ»Ð¸Ð¼Ð°Ñ‚Ð¸Ðº" << endl;
 			}
 			break;
 		}
@@ -287,7 +287,7 @@ bool isWithAC(int number, Room rooms[], int length)
 bool isWithAC(Room rooms[], int length)
 {
 	int number;
-	cout << "Âúâåäåòå íîìåð ñàòÿ: ";
+	cout << "Ð’ÑŠÐ²ÐµÐ´ÐµÑ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÐ°Ñ‚Ñ: ";
 	cin >> number;
 	for (int i = 0; i < length; i++)
 	{
@@ -306,49 +306,49 @@ void editPrice(int number, Room rooms[], int length)
 	{
 		if (rooms[i].number == number)
 		{
-			cout << "Öåíàòà çà íîùóâêà å "
+			cout << "Ð¦ÐµÐ½Ð°Ñ‚Ð° Ð·Ð° Ð½Ð¾Ñ‰ÑƒÐ²ÐºÐ° Ðµ "
 				<< rooms[i].price
 				<< endl;
-			cout << "Ùå ïðîìåíèòå ëè öåíàòà: (Y/N)";
+			cout << "Ð©Ðµ Ð¿Ñ€Ð¾Ð¼ÐµÐ½Ð¸Ñ‚Ðµ Ð»Ð¸ Ñ†ÐµÐ½Ð°Ñ‚Ð°: (Y/N)";
 			char ch;
 			cin >> ch;
 			if (ch == 'Y' || ch == 'y')
 			{
-				cout << "Âúâåäåòå íîâàòà öåíà: ";
+				cout << "Ð’ÑŠÐ²ÐµÐ´ÐµÑ‚Ðµ Ð½Ð¾Ð²Ð°Ñ‚Ð° Ñ†ÐµÐ½Ð°: ";
 				cin >> rooms[i].price;
 			}
 			return;
 		}
 	}
 
-	cout << "Íÿìà òàêàâà ñòàÿ" << endl;
+	cout << "ÐÑÐ¼Ð° Ñ‚Ð°ÐºÐ°Ð²Ð° ÑÑ‚Ð°Ñ" << endl;
 }
 
 void editPrice(Room rooms[], int length)
 {
 	int number;
-	cout << "Âúâåäåòå íîìåð ñàòÿ: ";
+	cout << "Ð’ÑŠÐ²ÐµÐ´ÐµÑ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÐ°Ñ‚Ñ: ";
 	cin >> number;
 	for (int i = 0; i < length; i++)
 	{
 		if (rooms[i].number == number)
 		{
-			cout << "Öåíàòà çà íîùóâêà å "
+			cout << "Ð¦ÐµÐ½Ð°Ñ‚Ð° Ð·Ð° Ð½Ð¾Ñ‰ÑƒÐ²ÐºÐ° Ðµ "
 				<< rooms[i].price
 				<< endl;
-			cout << "Ùå ïðîìåíèòå ëè öåíàòà: (Y)";
+			cout << "Ð©Ðµ Ð¿Ñ€Ð¾Ð¼ÐµÐ½Ð¸Ñ‚Ðµ Ð»Ð¸ Ñ†ÐµÐ½Ð°Ñ‚Ð°: (Y)";
 			char ch;
 			cin >> ch;
 			if (ch == 'Y' || ch == 'y')
 			{
-				cout << "Âúâåäåòå íîâàòà öåíà: ";
+				cout << "Ð’ÑŠÐ²ÐµÐ´ÐµÑ‚Ðµ Ð½Ð¾Ð²Ð°Ñ‚Ð° Ñ†ÐµÐ½Ð°: ";
 				cin >> rooms[i].price;
 			}
 			return;
 		}
 	}
 
-	cout << "Íÿìà òàêàâà ñòàÿ" << endl;
+	cout << "ÐÑÐ¼Ð° Ñ‚Ð°ÐºÐ°Ð²Ð° ÑÑ‚Ð°Ñ" << endl;
 }
 
 void sort(Room rooms[], int length)

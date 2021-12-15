@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 int main()
@@ -15,16 +15,16 @@ int main()
         case 6:
         case 8:
         case 10:
-            cout << "×èñëîòî íå å ïðîñòî!" << endl; 
+            cout << "Ð§Ð¸ÑÐ»Ð¾Ñ‚Ð¾ Ð½Ðµ Ðµ Ð¿Ñ€Ð¾ÑÑ‚Ð¾!" << endl; 
         break;
         case 2:
         case 3:
         case 5:
         case 7:
-            cout << "×èñëîòî å ïðîñòî!" << endl;
+            cout << "Ð§Ð¸ÑÐ»Ð¾Ñ‚Ð¾ Ðµ Ð¿Ñ€Ð¾ÑÑ‚Ð¾!" << endl;
         break;
         default:
-            cout << "Íå çíàì êàêâî å òîâà ÷èñëî!" << endl;
+            cout << "ÐÐµ Ð·Ð½Ð°Ð¼ ÐºÐ°ÐºÐ²Ð¾ Ðµ Ñ‚Ð¾Ð²Ð° Ñ‡Ð¸ÑÐ»Ð¾!" << endl;
         break;
     }
 }

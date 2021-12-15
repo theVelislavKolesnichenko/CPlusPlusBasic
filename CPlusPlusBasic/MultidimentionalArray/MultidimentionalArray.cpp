@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
 void array_in(int array[][10], int rows);
 void array_print(int array[][10], int rows);

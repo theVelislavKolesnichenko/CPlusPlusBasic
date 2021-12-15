@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 int main()
@@ -15,10 +15,10 @@ int main()
 
 	int a;
 	do {
-		cout << "Âúâåäåòå ÷èàëî: ";
+		cout << "Ð’ÑŠÐ²ÐµÐ´ÐµÑ‚Ðµ Ñ‡Ð¸Ð°Ð»Ð¾: ";
 		cin >> a;
 	} while (a < -1234 || a > 1234);
 
-	cout << "Âúâåäåíîòî ÷èñëî å: " << a << endl;
+	cout << "Ð’ÑŠÐ²ÐµÐ´ÐµÐ½Ð¾Ñ‚Ð¾ Ñ‡Ð¸ÑÐ»Ð¾ Ðµ: " << a << endl;
 }
 

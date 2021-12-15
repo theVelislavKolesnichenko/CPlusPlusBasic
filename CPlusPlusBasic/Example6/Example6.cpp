@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 using namespace std;
 
 struct Packet
@@ -26,12 +26,12 @@ int main()
 
 	do
 	{
-		cout << "1. Въвеждане на пратки\n"
-			<< "2. Извеждане на пратки\n"
-			<< "3. Пратка с най-малъук обем\n"
-			<< "4. Пратка с най-голям обем\n"
-			<< "5. Край\n"
-			<< "Изберете от 1 до 5: ";
+		cout << "1. Р’СЉРІРµР¶РґР°РЅРµ РЅР° РїСЂР°С‚РєРё\n"
+			<< "2. РР·РІРµР¶РґР°РЅРµ РЅР° РїСЂР°С‚РєРё\n"
+			<< "3. РџСЂР°С‚РєР° СЃ РЅР°Р№-РјР°Р»СЉСѓРє РѕР±РµРј\n"
+			<< "4. РџСЂР°С‚РєР° СЃ РЅР°Р№-РіРѕР»СЏРј РѕР±РµРј\n"
+			<< "5. РљСЂР°Р№\n"
+			<< "РР·Р±РµСЂРµС‚Рµ РѕС‚ 1 РґРѕ 5: ";
 		cin >> option;
 		switch (option)
 		{
@@ -47,23 +47,23 @@ int main()
 		break;
 		case 3:
 		{
-			cout << "Пратка с минимален обем: " << endl;
+			cout << "РџСЂР°С‚РєР° СЃ РјРёРЅРёРјР°Р»РµРЅ РѕР±РµРј: " << endl;
 			int index = indexOfPacketWithMinVolume(packets, length);
 			out(packets[index]);
 		}
 		break;
 		case 4:
 		{
-			cout << "Пратка с максимален обем: " << endl;
+			cout << "РџСЂР°С‚РєР° СЃ РјР°РєСЃРёРјР°Р»РµРЅ РѕР±РµРј: " << endl;
 			int index = indexOfPacketWithMaxVolume(packets, length);
 			out(packets[index]);
 		}
 		break;
 		case 5:
-			cout << "Довиждане! " << endl;
+			cout << "Р”РѕРІРёР¶РґР°РЅРµ! " << endl;
 			break;
 		default:
-			cout << "Невалиден избор!" << endl;
+			cout << "РќРµРІР°Р»РёРґРµРЅ РёР·Р±РѕСЂ!" << endl;
 			break;
 		}
 	} while (option != 5);
@@ -73,11 +73,11 @@ void in(Packet packets[], int length)
 {
 	for (int i = 0; i < length; i++)
 	{
-		cout << "Номер на пратка: ";
+		cout << "РќРѕРјРµСЂ РЅР° РїСЂР°С‚РєР°: ";
 		cin >> packets[i].number;
-		packets[i].height = enterInRange("Височина", 5, 200);
-		packets[i].length = enterInRange("Дължина", 5, 200);
-		packets[i].width = enterInRange("Ширина", 5, 200);
+		packets[i].height = enterInRange("Р’РёСЃРѕС‡РёРЅР°", 5, 200);
+		packets[i].length = enterInRange("Р”СЉР»Р¶РёРЅР°", 5, 200);
+		packets[i].width = enterInRange("РЁРёСЂРёРЅР°", 5, 200);
 	}
 }
 
@@ -104,10 +104,10 @@ void out(Packet packets[], int length)
 
 void out(Packet packet) 
 {
-	cout << "\nНомер на пратка: " << packet.number;
-	cout << "\nВисочина: " << packet.height;
-	cout << "\nДължина: " << packet.length;
-	cout << "\nШирина: " << packet.width << endl;
+	cout << "\nРќРѕРјРµСЂ РЅР° РїСЂР°С‚РєР°: " << packet.number;
+	cout << "\nР’РёСЃРѕС‡РёРЅР°: " << packet.height;
+	cout << "\nР”СЉР»Р¶РёРЅР°: " << packet.length;
+	cout << "\nРЁРёСЂРёРЅР°: " << packet.width << endl;
 }
 
 double volume(Packet packet)

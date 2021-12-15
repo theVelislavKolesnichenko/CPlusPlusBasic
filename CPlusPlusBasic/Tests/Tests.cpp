@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <time.h>
 #include <iomanip>
 using namespace std;
@@ -8,11 +8,11 @@ string decod(string str);
 int main()
 {
 	setlocale(LC_ALL, "");
-	string str = "Нито едното";
+	string str = "РќРёС‚Рѕ РµРґРЅРѕС‚Рѕ";
 	cout << decod(str) << endl;
-	str = "*и$о ед*о$о";
+	str = "*Рё$Рѕ РµРґ*Рѕ$Рѕ";
 	cout << decod(str) << endl;
-	str = "Нито ед*о$о";
+	str = "РќРёС‚Рѕ РµРґ*Рѕ$Рѕ";
 	cout << decod(str) << endl;	
 
 	string currency[10] = { "AUD", "BRL", "CAD", "CHF", "CNY","CZK","DKK","GBP","HKD", "HRK" };
@@ -23,17 +23,17 @@ string decod(string str)
 {
 	for (int i = 0; i < str.length(); i++)
 	{
-		if (str[i] == 'т' || str[i] == 'Т') {
+		if (str[i] == 'С‚' || str[i] == 'Рў') {
 			str[i] = '$';
 		}
-		else if (str[i] == 'н' || str[i] == 'Н') {
+		else if (str[i] == 'РЅ' || str[i] == 'Рќ') {
 			str[i] = '*';
 		}
 		else if (str[i] == '$') {
-			str[i] = (i == 0) ? 'T' : 'т';		
+			str[i] = (i == 0) ? 'T' : 'С‚';		
 		}
 		else if (str[i] == '*') {
-			str[i] = (i == 0) ? 'Н' : 'н';
+			str[i] = (i == 0) ? 'Рќ' : 'РЅ';
 		}
 	}
 

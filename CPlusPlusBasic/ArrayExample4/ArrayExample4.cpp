@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 using namespace std;
 
 int main()
@@ -12,12 +12,12 @@ int main()
     cout << "Enter characters:" << endl;
     //cin >> ch4;
     cin.getline(ch4, 5);
-    //Достъп до елемент от масив
+    //Р”РѕСЃС‚СЉРї РґРѕ РµР»РµРјРµРЅС‚ РѕС‚ РјР°СЃРёРІ
     cout << endl << ch4[0] << endl;
     cout << endl << ch4[4] << endl;
     cout << endl << ch4[9] << endl;
 
-    //Извеждане на масив
+    //РР·РІРµР¶РґР°РЅРµ РЅР° РјР°СЃРёРІ
     cout << endl << ch1 << endl;
     cout << endl << ch2 << endl;
     cout << endl << ch3 << endl;
