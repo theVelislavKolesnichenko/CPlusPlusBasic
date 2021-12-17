@@ -22,7 +22,11 @@ void bookBinaryFileRead(Book books[]);
 void bookTextFileSave(Book books[], int count);
 void bookTextFileRead(Book books[]);
 void bookSort(Book books[], int count);
+void printBookByAuthor(Book books[], int count);
+int maxBookCount(Book books[], int count);
+void sortBookByAuthor(Book books[], int count);
 void sale(Book books[], int count);
+void saveBookInFile(Book books[], int count);
 
 int main()
 {
@@ -31,12 +35,16 @@ int main()
 	do {
 		cout << "1. Enter Books" << endl;
 		cout << "2. Print Books" << endl;
-		cout << "3. Save Books in binary file" << endl;
-		cout << "4. Read Books from binary file" << endl;
-		cout << "5. Save Books in text file" << endl;
-		cout << "6. Read Books from text file" << endl;
-		cout << "7. Sort array" << endl;
-		cout << "8. Sale book" << endl;
+		cout << "3. Files with Books" << endl;
+
+		//cout << "3. Save Books in binary file" << endl;
+		//cout << "4. Read Books from binary file" << endl;
+		//cout << "5. Save Books in text file" << endl;
+		//cout << "6. Read Books from text file" << endl;
+
+		cout << "4. Sort array" << endl;
+		cout << "5. Sale book" << endl;
+		cout << "6. Odit book" << endl;
 		cout << "0. Exit" << endl;
 		cout << "Select option: ";
 		cin >> op;
@@ -56,37 +64,25 @@ int main()
 		break;
 		case 3:
 		{
-			bookBinaryFileSave(newBooks, booksCount);
-			system("pause");
+			system("cls");
+			saveBookInFile(newBooks, booksCount);
 		}
 		break;
 		case 4:
-		{
-			bookBinaryFileRead(newBooks);
-			system("pause");
-		}
-		break;
-		case 5:
-		{
-			bookTextFileSave(newBooks, booksCount);
-			system("pause");
-		}
-		break;
-		case 6:
-		{
-			bookTextFileRead(newBooks);
-			system("pause");
-		}
-		break;
-		case 7:
 		{
 			bookSort(newBooks, booksCount);
 			system("pause");
 		}
 		break;
-		case 8:
+		case 5:
 		{
 			sale(newBooks, booksCount);
+			system("pause");
+		}
+		break;
+		case 6:
+		{
+			printBookByAuthor(newBooks, booksCount);
 			system("pause");
 		}
 		break;
@@ -112,6 +108,119 @@ int main()
 	return 0;
 }
 
+void saveBookInFile(Book books[], int count) 
+{
+	int op;
+	do {
+		cout << "1. Save Books in binary file" << endl;
+		cout << "2. Read Books from binary file" << endl;
+		cout << "3. Save Books in text file" << endl;
+		cout << "4. Read Books from text file" << endl;
+		cout << "0. Back" << endl;
+		cout << "Select option: ";
+		cin >> op;
+		switch (op)
+		{
+		case 1:
+		{
+			bookBinaryFileSave(books, count);
+			system("pause");
+		}
+		break;
+		case 2:
+		{
+			bookBinaryFileRead(books);
+			system("pause");
+		}
+		break;
+		case 3:
+		{
+			bookTextFileSave(books, count);
+			system("pause");
+		}
+		break;
+		case 4:
+		{
+			bookTextFileRead(books);
+			system("pause");
+		}
+		break;
+		case 0:
+		{
+			cout << "Exit with <y> : ";
+			char ch;
+			cin >> ch;
+			if (ch != 'y' && ch != 'Y')
+			{
+				op = -1;
+			}
+		}
+		break;
+		default:
+			cout << "Invalid operatin" << endl;
+			system("pause");
+			cin.ignore();
+			break;
+		}
+		system("cls");
+	} while (op != 0);
+}
+
+int maxBookCount(Book books[], int count)
+{
+	int max = books[0].count;
+	for (int i = 0; i < count; i++)
+	{
+		if (max < books[i].count)
+		{
+			max = books[i].count;
+		}
+	}
+	return max;
+}
+
+void sortBookByAuthor(Book books[], int count)
+{
+	for (int i = 0; i < count - 1; i++)
+	{
+		for (int j = 0; j < count - 1 - i; j++)
+		{
+			if (strcmp(books[j].author, books[j + 1].author) == 1) 
+			{
+				Book temp = books[j + 1];
+				books[j + 1] = books[j];
+				books[j] = temp;
+			}
+		}
+	}
+}
+
+void printBookByAuthor(Book books[], int count) 
+{
+	cout << "9. Odit Print Book by author" << endl;
+	
+	//Nai golemiq broj knigi
+	int maxCount = maxBookCount(books, count);
+
+	//Nov Masiv s knigite s nai golqm broj
+	Book bookWithMaxCount[booksCount];
+	int sizeOfBookWithMaxCount = 0;
+	for (int i = 0; i < count; i++)
+	{
+		if (books[i].count == maxCount)
+		{
+			bookWithMaxCount[sizeOfBookWithMaxCount] = books[i];
+			sizeOfBookWithMaxCount++;
+		}
+	}
+
+	//Podrevdane po avtor
+	sortBookByAuthor(bookWithMaxCount, sizeOfBookWithMaxCount);
+
+	//izwevdane
+	bookOut(bookWithMaxCount, sizeOfBookWithMaxCount);
+}
+
 void bookIn(Book books[], int count)
 {
 	cout << "1. Enter Books" << endl;
@@ -120,11 +229,13 @@ void bookIn(Book books[], int count)
 	{
 		//cin.ignore();
 		cout << "Enter number "; cin >> books[i].number;
+		cin.ignore();
 		cout << "Enter title "; cin.getline(books[i].title, 50);
 		cout << "Enter author "; cin.getline(books[i].author, 50);
 		cout << "Enter pages "; cin >> books[i].pages;
 		cout << "Enter price "; cin >> books[i].pice;
-		cout << "Enter count "; books[i].count = 1 + rand() % 50;
+		books[i].count = 1 + rand() % 2;
+		cout << "Enter count: " << books[i].count << endl;
 	}
 }
 

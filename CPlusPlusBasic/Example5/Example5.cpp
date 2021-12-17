@@ -7,6 +7,8 @@ struct Room {
 	bool hasAC;
 };
 
+#define MAX_ROOMS 5
+
 void in(Room rooms[], int length);
 void out(Room rooms[], int length);
 void out(Room rooms);
@@ -19,13 +21,16 @@ bool isWithAC(Room rooms[], int length);
 void editPrice(int number, Room rooms[], int length);
 void editPrice(Room rooms[], int length);
 void sort(Room rooms[], int length);
+void printByAvgPrice(Room rooms[], int length);
+double avgPriceOfRoom(Room rooms[], int length);
+void sortByAvgPrive(Room rooms[], int length, double avg);
 
 int main()
 {
 	setlocale(LC_ALL, "");
 	int option;
-	const int length = 7;
-	Room rooms[length];
+	const int length = MAX_ROOMS;
+	Room rooms[MAX_ROOMS];
 	do
 	{
 		system("cls");
@@ -39,8 +44,9 @@ int main()
 			<< " 8. Има ли климатик в стаята 4\n"
 			<< " 9. Промяна на цената за нощувка 1\n"
 			<< "10. Промяна на цената за нощувка 2\n"
-			<< "11.Подреждане по цена\n"
-			<< "12. Излизане\n"
+			<< "11. Подреждане по цена\n"
+			<< "12. Извеждане по средна цена за етаж\n"
+			<< "0. Излизане\n"
 			<< "Изберете (1 - 12): ";
 
 		cin >> option;
@@ -147,13 +153,74 @@ int main()
 			sort(rooms, length);
 		}
 		break;
+		case 12:
+		{
+			printByAvgPrice(rooms, length);
+			system("pause");
+		}
+		break;
 		default:
 			cout << "Невалиден избор! Изберете отново\n";
 			break;
 		}
-	} while (option != 12);
+	} while (option != 0);
 
 	return 0;
+}
+
+void printByAvgPrice(Room rooms[], int length) 
+{
+	//staite na etaja
+	int rtaj;
+	cout << "Въведете етаж: ";
+	cin >> rtaj;
+	Room roomsIn[MAX_ROOMS];
+	int size = 0;
+	for (int i = 0; i < length; i++)
+	{
+		if (rooms[i].number < (rtaj + 1) * 100 && rooms[i].number > (rtaj - 1) * 100)
+		{
+			roomsIn[size] = rooms[i];
+			size++;
+		}
+	}
+
+	//srednata cena na stajte
+	double avg = avgPriceOfRoom(roomsIn, size);
+
+	//podrevdane po srednacena
+	sortByAvgPrive(roomsIn, size, avg);
+
+	//izvejdane
+	out(roomsIn, size);
+}
+
+void sortByAvgPrive(Room rooms[], int length, double avg)
+{
+	for (int i = 0; i < length - 1; i++)
+	{
+		for (int j = 0; j < length - i - 1; j++)
+		{
+			if (abs(rooms[j].price - avg) > abs(rooms[j + 1].price - avg))
+			{
+				Room t = rooms[j];
+				rooms[j] = rooms[j + 1];
+				rooms[j + 1] = t;
+			}
+		}
+	}
+}
+
+double avgPriceOfRoom(Room rooms[], int length)
+{
+	double sum = 0;
+	
+	for (int i = 0; i < length; i++)
+	{
+		sum = sum + rooms[i].price;
+	}
+
+	return sum / length;
 }
 
 void in(Room rooms[], int length)
@@ -309,13 +376,33 @@ void editPrice(int number, Room rooms[], int length)
 			cout << "Цената за нощувка е "
 				<< rooms[i].price
 				<< endl;
-			cout << "Ще промените ли цената: (Y/N)";
 			char ch;
+			cout << "Ще промените ли цената: (Y/N)";
 			cin >> ch;
 			if (ch == 'Y' || ch == 'y')
 			{
 				cout << "Въведете новата цена: ";
 				cin >> rooms[i].price;
+			}
+			cout << "Климатика в стаята е "
+				<< rooms[i].hasAC
+				<< endl;
+			cout << "Ще промените ли наличието на климатик: (Y/N)";
+			cin >> ch;
+			if (ch == 'Y' || ch == 'y')
+			{
+				cout << "Има ли климати: ";
+				cin >> rooms[i].hasAC;
+			}
+			cout << "Номера на стаята "
+				<< rooms[i].number
+				<< endl;
+			cout << "Ще промените ли номера на стаята: (Y/N)";
+			cin >> ch;
+			if (ch == 'Y' || ch == 'y')
+			{
+				cout << "Новия номер на стаята е: ";
+				cin >> rooms[i].number;
 			}
 			return;
 		}
