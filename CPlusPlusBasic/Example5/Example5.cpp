@@ -170,14 +170,14 @@ int main()
 
 void printByAvgPrice(Room rooms[], int length) 
 {
-	//staite na etaja
+	//въвеждана не момер на етаж
 	int rtaj;
-	cout << "Въведете етаж: ";
+	cout << "Въведете етаж: ";//1, 2, 3, 4 ...
 	cin >> rtaj;
 	Room roomsIn[MAX_ROOMS];
 	int size = 0;
 	for (int i = 0; i < length; i++)
-	{
+	{//101, 102, 201, 202, 301, 302, 401,402,,
 		if (rooms[i].number < (rtaj + 1) * 100 && rooms[i].number > (rtaj - 1) * 100)
 		{
 			roomsIn[size] = rooms[i];
@@ -185,13 +185,13 @@ void printByAvgPrice(Room rooms[], int length)
 		}
 	}
 
-	//srednata cena na stajte
+	//средната цена на стайте от етажа
 	double avg = avgPriceOfRoom(roomsIn, size);
 
-	//podrevdane po srednacena
+	//подреждане по средна цена
 	sortByAvgPrive(roomsIn, size, avg);
 
-	//izvejdane
+	//извеждане
 	out(roomsIn, size);
 }
 

@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <time.h>
 #include <iomanip>
+#include <Windows.h>
 using namespace std;
 
 string decod(string str);
@@ -8,7 +9,10 @@ string decod(string str);
 int main()
 {
 	setlocale(LC_ALL, "");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 	string str = "Нито едното";
+	cin >> str;
 	cout << decod(str) << endl;
 	str = "*и$о ед*о$о";
 	cout << decod(str) << endl;

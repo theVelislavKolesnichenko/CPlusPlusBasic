@@ -1,24 +1,26 @@
 ﻿#include <iostream>
 #include <string>
 #include <fstream>
+#include <Windows.h>
 using namespace std;
 
 struct Book {
 	int number;
 	int count;
 
+	//string title;
 	char title[50];
 	char author[50];
 	int pages;
 	double pice;
 };
 
-#define booksCount 3
+#define booksCount 25
 
 void bookIn(Book books[], int count);
-void bookOut(Book books[], int count);
+void bookOut(Book books[], int start, int end);
 void bookBinaryFileSave(Book books[], int count);
-void bookBinaryFileRead(Book books[]);
+int bookBinaryFileRead(Book books[], int count);
 void bookTextFileSave(Book books[], int count);
 void bookTextFileRead(Book books[]);
 void bookSort(Book books[], int count);
@@ -30,6 +32,10 @@ void saveBookInFile(Book books[], int count);
 
 int main()
 {
+	setlocale(LC_ALL, "");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
 	Book newBooks[booksCount];
 	int op;
 	do {
@@ -58,7 +64,7 @@ int main()
 		break;
 		case 2:
 		{
-			bookOut(newBooks, booksCount);
+			bookOut(newBooks, 0, booksCount);
 			system("pause");
 		}
 		break;
@@ -129,7 +135,7 @@ void saveBookInFile(Book books[], int count)
 		break;
 		case 2:
 		{
-			bookBinaryFileRead(books);
+			bookBinaryFileRead(books, count);
 			system("pause");
 		}
 		break;
@@ -218,7 +224,7 @@ void printBookByAuthor(Book books[], int count)
 	sortBookByAuthor(bookWithMaxCount, sizeOfBookWithMaxCount);
 
 	//izwevdane
-	bookOut(bookWithMaxCount, sizeOfBookWithMaxCount);
+	bookOut(bookWithMaxCount, 0, sizeOfBookWithMaxCount);
 }
 
 void bookIn(Book books[], int count)
@@ -231,18 +237,21 @@ void bookIn(Book books[], int count)
 		cout << "Enter number "; cin >> books[i].number;
 		cin.ignore();
 		cout << "Enter title "; cin.getline(books[i].title, 50);
+		//cout << "Enter title "; getline(cin, books[i].title);
 		cout << "Enter author "; cin.getline(books[i].author, 50);
 		cout << "Enter pages "; cin >> books[i].pages;
 		cout << "Enter price "; cin >> books[i].pice;
-		books[i].count = 1 + rand() % 2;
+		books[i].count = 1 + rand() % 20;
 		cout << "Enter count: " << books[i].count << endl;
+		cout << "Random Number: " << (100 + rand() % 200) << endl;
 	}
 }
 
-void bookOut(Book books[], int count)
+void bookOut(Book books[], int start, int end)
 {
 	cout << "2. Print Books" << endl;
-	for (int i = 0; i < count; i++)
+	int page = 1;
+	for (int i = start; i < end; i++)
 	{
 		cout << "Book " << i << endl;
 		cout << "Number: " << books[i].number << endl;
@@ -251,6 +260,18 @@ void bookOut(Book books[], int count)
 		cout << "Pages: " << books[i].pages << endl;
 		cout << "Price: " << books[i].pice << endl;
 		cout << "Count: " << books[i].count << endl;
+
+		if ((i + 1) % 5 == 0) 
+		{
+			char op;
+			cout << "Page " << page++ << " next page " << page << " (N): ";
+			cin >> op;
+			if (op != 'N' && op != 'n')
+			{
+				break;
+			}
+			system("cls");
+		}
 	}
 }
 
@@ -259,22 +280,41 @@ void bookBinaryFileSave(Book books[], int count)
 	cout << "3. Save Books in binary file" << endl;
 	fstream file;
 	file.open("Books.bin", ios::binary | ios::out);
-	file.write((char*)books, count * (sizeof(Book)));
+	file.write((char*)books, sizeof(books) * count);
 	file.close();
 }
+//I 
+//Books -> 40
+//books[15] -> 600
+//"Books.bin" -> 680
 
-void bookBinaryFileRead(Book books[])
+//II
+//Books -> 40
+//books[15] -> 600
+//"Books.bin" -> 400
+int bookBinaryFileRead(Book books[], int count)
 {
 	cout << "4. Read Books from binaty file" << endl;
+
 	fstream file;
 	file.open("Books.bin", ios::binary | ios::in);
+
 	file.seekg(0L, ios::end);
-	long pos = (long)file.tellg();
+	long size = (long)file.tellg();
+	file.seekg(0L, ios::beg);
+	        //400 / 40 -> 10
+	int n = size / (sizeof(Book));
+	//  10 > 15
+	if (n > count) {
+		       //15  * 40 -> 600
+		size = count * sizeof(Book);
+		n = count;
+	}
+
+	file.read((char*)books, size);
 	file.close();
-	int n = pos / (sizeof(Book));
-	file.open("Books.bin", ios::binary | ios::in);
-	file.read((char*)books, n * (sizeof(Book)));
-	file.close();
+
+	return n;
 }
 
 void bookTextFileSave(Book books[], int count)
@@ -284,6 +324,8 @@ void bookTextFileSave(Book books[], int count)
 	file.open("Books.txt", ios::out);
 	for (int i = 0; i < count; i++)
 	{
+		file << books[i].number << endl;
+		file << books[i].count << endl;
 		file << books[i].title << endl;
 		file << books[i].author << endl;
 		file << books[i].pages << endl;
@@ -300,6 +342,10 @@ void bookTextFileRead(Book books[])
 	file.open("Books.txt", ios::in);
 	for (int i = 0; i < booksCount; i++)
 	{
+		file >> books[i].number;
+		file >> books[i].count;
+		file.ignore();
+		//getline(file, books[i].title);
 		file.getline(books[i].title, 50);
 		file.getline(books[i].author, 50);
 		file >> books[i].pages;

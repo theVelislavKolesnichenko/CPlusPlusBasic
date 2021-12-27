@@ -12,61 +12,79 @@ void array_print(int a[], int count);
 
 int main()
 {
-	int a[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 }, b[20];
+	int a[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 }, 
+		b[20];
 
 	cout << "Text File write\n";
-	file_out(a, 10);
+	//file_out(a, 10);
 
 	cout << "Text File read\n";
+	//file_in_v1(b, 20);
 	int sizeOfarrayB = file_in_v2(b, 20);
 
 	cout << "Array Print\n";
+	//array_print(b, 20);
 	array_print(b, sizeOfarrayB);
 
 	return 0;
 }
 void file_out(int a[], int count)
 {
-	fstream file;
-	file.open(filename, ios::out);
+	fstream fout;
+	fout.open(filename, ios::out);
 
 	for (int i = 0; i < count; i++)
 	{
 	  //cout << a[i] << endl;
-		file << a[i];
+		fout << a[i];
 
 		if ((i + 1) < count) 
 		{
-			file << endl;
+			fout << endl;
 		}
 	}
 
-	file.close();
+	fout.close();
 }
 
 void file_in_v1(int a[], int count)
 {
-	fstream file;
-	file.open(filename, ios::in);
+	fstream fin;
+	fin.open(filename, ios::in);
 
 	for (int i = 0; i < count; i++)
 	{
 	  //cin >> a[i];
-		file >> a[i];
+		fin >> a[i];
 	}
 
-	file.close();
+	fin.close();
 }
 
 int file_in_v2(int a[], int count)
 {
 	fstream file;
 	file.open(filename, ios::in);
-	int index = 0;
+	int index = 0;// Прочетените стойности
 	while (!file.eof() && count > index)
 	{
+		if (file.fail())
+		{
+			cout << "File red fail";
+		}
+
 		file >> a[index];
-		index++;
+
+		if (file.fail())
+		{
+			file.clear();
+			file.ignore(LLONG_MAX, '\n');
+			cout << "File red fail";
+		}
+		else 
+		{
+			index++;
+		}
 	}
 
 	file.close();

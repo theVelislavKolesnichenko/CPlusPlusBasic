@@ -19,7 +19,7 @@ int main()
 
         cout << "Enter string 1: ";
         cin.ignore(LLONG_MAX, '\n');
-        getline(cin >> ws, str1);
+        getline(cin, str1);
 
         number = enter();
     } while (number == 0);
