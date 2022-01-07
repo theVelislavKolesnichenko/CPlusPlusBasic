@@ -8,9 +8,24 @@ int main()
 {
     string str, str1;
     int number;
+    string ch;
 
     do
     {
+        int num = -1;
+        do
+        {
+            cout << "Enter char: ";
+            getline(cin, ch);
+
+            if (isdigit(ch[0]))
+            {
+                num = stoi(ch);
+            }
+
+        } while (ch == "\n" || num < 0);
+
+
         cout << "Enter number: ";
         cin >> number;
 

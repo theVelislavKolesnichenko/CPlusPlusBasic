@@ -64,7 +64,7 @@ void file_in_v1(int a[], int count)
 int file_in_v2(int a[], int count)
 {
 	fstream file;
-	file.open(filename, ios::in);
+	file.open(filename, ios::in | ios::_Nocreate);
 	int index = 0;// Прочетените стойности
 	while (!file.eof() && count > index)
 	{
