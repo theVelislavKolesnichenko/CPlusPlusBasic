@@ -93,7 +93,7 @@ void printMatrix(int rows, int columns, int  matrix[][10])
 
 void printArrow(int columns)
 {
-	for (int i = 0; i < columns; i++)
+	for (int i(0); i < columns; i++)
 	{
 		cout << "  | ";
 	}
