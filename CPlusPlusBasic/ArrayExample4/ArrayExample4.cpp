@@ -11,7 +11,7 @@ int main()
 
     cout << "Enter characters:" << endl;
     //cin >> ch4;
-    cin.getline(ch4, 5);
+    cin.getline(ch4, 10);   
     //Достъп до елемент от масив
     cout << endl << ch4[0] << endl;
     cout << endl << ch4[4] << endl;

@@ -8,7 +8,7 @@ struct Point {
 };
 
 struct Line {
-     Point A, B;
+     Point start, end;
 };
 
 void printPoint(Point point);
@@ -53,13 +53,13 @@ int enterLine(Line line[], int i)
     double min = -65;
     double max = 74;
 
-    line[i].A.symbol = randomSymbol();
-    line[i].A.x = random(min, max);
-    line[i].A.y = random(min, max);
+    line[i].start.symbol = randomSymbol();
+    line[i].start.x = random(min, max);
+    line[i].start.y = random(min, max);
 
-    line[i].B.symbol = randomSymbol();
-    line[i].B.x = random(min, max);
-    line[i].B.y = random(min, max);
+    line[i].end.symbol = randomSymbol();
+    line[i].end.x = random(min, max);
+    line[i].end.y = random(min, max);
 
     return i+1;
 }
@@ -90,8 +90,8 @@ void printLines(Line line[], int size)
 double lineLength(Line line)
 {
     return sqrt(
-        pow((line.A.x - line.B.x), 2) +
-        pow((line.A.y - line.B.y), 2));
+        pow((line.start.x - line.end.x), 2) +
+        pow((line.start.y - line.end.y), 2));
 }
 
 void sortLines(Line line[], int size) 
@@ -131,10 +131,10 @@ Line enterLine()
 {
     Line line;
     cout << "Enter Line with point A with: \n";
-    line.A = enterPoint();
+    line.start = enterPoint();
 
     cout << "and point B with: \n";
-    line.B = enterPoint();
+    line.end = enterPoint();
 
     return line;
 }
@@ -142,8 +142,8 @@ Line enterLine()
 void printLine(Line line)
 {
     cout << "Line[";
-    printPoint(line.A);
+    printPoint(line.start);
     cout << ", ";
-    printPoint(line.B);
+    printPoint(line.end);
     cout << "] -> " << lineLength(line);
 }

@@ -10,13 +10,13 @@ int main()
     int number;
     string ch;
     
-    int s = 5;
-    int s1 = 2;
-    int a = ++s + s1;
-    cout << a << endl;
-    s = 5;
-    int b = s++ + s1;
-    cout << b << endl;
+    //int s = 5;
+    //int s1 = 2;
+    //int a = ++s + s1;
+    //cout << a << endl;
+    //s = 5;
+    //int b = s++ + s1;
+    //cout << b << endl;
 
 
     do
@@ -44,6 +44,7 @@ int main()
         cout << "Enter string 1: ";
         cin.ignore(LLONG_MAX, '\n');
         getline(cin, str1);
+
 
         number = enter();
     } while (number == 0);

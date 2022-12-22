@@ -38,7 +38,7 @@ void enterMatrix(int matrix[][10], int rows, int columns)
 	{
 		for (int j = 0; j < columns; j++)
 		{
-			matrix[i][j] = 27 + rand() % 54;
+			matrix[i][j] = 1 + rand() % 154;
 		}
 	}
 }
@@ -75,7 +75,7 @@ void printMatrix(int matrix[][10], int rows, int columns)
 	{
 		for (int col = 0; col < 10; col++)
 		{
-			cout << setw(2) << matrix[row][col] << " ";
+			cout << setw(3) << matrix[row][col] << " ";
 		}
 		cout << endl;
 	}

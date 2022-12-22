@@ -68,7 +68,7 @@ int enter(book Lib[], int n)
 	else
 		cout << "\n There are no free places in arry Lib\n";
 }
-void saveinfile(book Lib[], int n);
+void saveinfile(book Lib[], int n)
 {
 	fp.open(Filename, ios::binary | ios::out);
 	if (!fp) { cout << "\n Error in file \n"; exit(1); }
@@ -86,17 +86,17 @@ void append()
 	fp.write((char*)&b, sizeof(book));
 	fp.close();
 }
-void output(book Lib[], int)
+void output(book Lib[], int n)
 {
-	int i, k = 0
-		cout << "\n \t Catalogue of books\n";
+	int i, k = 0;
+	cout << "\n \t Catalogue of books\n";
 	for (i = 0; i < n; i++)
 	{
-		cout << "\n << i + 1 << "\t << Lib[i].avtor << " " << Lib[i].title;
+		cout << "\n" << i + 1 << "\t" << Lib[i].avtor << " " << Lib[i].title;
 		cout << " " << Lib[i.year] << " " << Lib[i].catnum << " " << Lib[i].br << " " << Lib[i].
 			k++; if (k % 5 == 0)cout << "\n \n \n \n \n";
 	}
-	{
+}
 
 		int loadfile(book Lib[])
 		{

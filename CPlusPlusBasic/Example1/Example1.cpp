@@ -1,30 +1,36 @@
 ﻿#include <iostream>
 #include <string>
 #include <iomanip>
+#include <fstream>
 #include <time.h>
 
 using namespace std;
 
 struct Athlete {
-    char name[50];
+    //char name[50];
+    string name;
     int rating[5];
 };
 
-void in(Athlete athlets[], int size);
+int in(Athlete athlets[], int size);
 void out(Athlete athlets[], int size);
 void out(Athlete athlets);
 int max(Athlete athlets[], int size);
 int min(Athlete athlets[], int size);
 void sort(Athlete athlets[], int size);
 double avg(int rating[], int size);
+void save(Athlete rating[], int size);
+int read(Athlete rating[]);
 
 int main()
 {
     setlocale(LC_ALL, "BG");
-    const int size = 5;
-    Athlete athlets[size];
+    const int maxSize = 5;
+
+    Athlete athlets[maxSize];
     unsigned short option = 0;
     char choice = 'n';
+    int currontSize = read(athlets);
     do {
         cout << "\nИзберете действие" << endl;
         cout << "1. Въвеждане на резултатите на състезателките\n"
@@ -39,30 +45,30 @@ int main()
         case 1:
         {
             cin.ignore();
-            in(athlets, size);
+            currontSize = in(athlets, currontSize, maxSize);
             break;
         }
         case 2:
         {
-            out(athlets, size);
+            out(athlets, currontSize);
             break;
         }
         case 3:
         {
-            int index = max(athlets, size);
+            int index = max(athlets, currontSize);
             out(athlets[index]);
             break;
         }
         case 4:
         {
-            int index = min(athlets, size);
+            int index = min(athlets, currontSize);
             out(athlets[index]);
             break;
         }
         case 5:
         {
-            sort(athlets, size);
-            out(athlets, size);
+            sort(athlets, currontSize);
+            out(athlets, currontSize);
             break;
         }
         case 6:
@@ -85,34 +91,40 @@ int main()
 
     } while (choice != 'y');
 
+    save(athlets, currontSize);
+
     return 0;
 }
 
-void in(Athlete athlets[], int size)
+int in(Athlete athlets[], int currontSize, int maxSize)
 {
     srand(time(0));
-    for (int i = 0; i < size; i++)
+    int size = 0;
+    do {
+        cout << "Enter value for size from 1 to " << maxSize - currontSize;
+        cin >> size;
+    } while (size > maxSize - currontSize);
+    
+    
+    for (int i = currontSize; i < size + currontSize; i++)
     {
         cout << "Enter name: ";
-        cin.getline(athlets[i].name, 50);
+        //cin.getline(athlets[i].name, 50);
+        getline(cin, athlets[i].name);
         for (int j = 0; j < 5; j++)
         {
             athlets[i].rating[j] = 30 - rand() % 11;
         }
     }
+
+    return currontSize + size;
 }
 
 void out(Athlete athlets[], int size)
 {
     for (int i = 0; i < size; i++)
     {
-        cout << "Name: " << athlets[i].name << endl;
-        for (int j = 0; j < 5; j++)
-        {
-            cout << "Rating " << j + 1 << " "
-                << athlets[i].rating[j] << endl;
-        }
-        cout << "Avg: " << avg(athlets[i].rating, 5) << endl;
+        out(athlets[i]);
     }
 }
 
@@ -180,4 +192,41 @@ double avg(int rating[], int size)
     }
 
     return sum / size;
+}
+
+void save(Athlete athletes[], int length)
+{
+    fstream fp;
+    fp.open("athlete.txt", ios::out);
+
+    for (int i = 0; i < length; i++)
+    {
+        fp << athletes[i].name << endl;
+        for (int j = 0; j < 5; j++)
+        {
+            fp << athletes[i].rating[j] << endl;
+        }
+    }
+
+    fp.close();
+}
+
+int read(Athlete athletes[])
+{
+    fstream fp;
+    fp.open("athlete.txt",  ios::in);
+    int length = 0;
+    while (!fp.eof()) {
+        getline(fp, athletes[length].name);
+        for (int j = 0; j < 5; j++)
+        {
+            fp >> athletes[length].rating[j];
+        }
+        fp.ignore();
+        length++;
+    }
+
+    fp.close();
+
+    return length;
 }

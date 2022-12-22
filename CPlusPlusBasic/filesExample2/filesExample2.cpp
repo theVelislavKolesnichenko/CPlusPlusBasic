@@ -37,15 +37,15 @@ void file_out(int a[], int count)
 //20 -> 80
 int file_in(int a[], int count)
 {
-	fstream file(filename, ios::binary | ios::in);
+	fstream file(filename, ios::binary | ios::in );
 
 	file.seekg(0, ios::end);
-	int size = file.tellg();//40
+	int size = file.tellg();//80
 	file.seekg(0, ios::beg);
 
-	if (size > count * sizeof(a))
+	if (size > count * sizeof(a))//40
 	{
-		size = count * sizeof(a);//80
+		size = count * sizeof(a);//40
 	}
 
 	file.read((char*)a, size);

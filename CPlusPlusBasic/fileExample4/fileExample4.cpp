@@ -52,7 +52,11 @@ void output(int a[], int length)
 {
 	for (int i = 0; i < length; i++)
 	{
-		cout << "a[" << i << "]= " << a[i] << endl;
+		cout << a[i];
+		if (length > i + 1)
+		{
+			cout << " ";
+		}
 	}
 }
 
@@ -68,24 +72,23 @@ void fileWrite(int a[], int count)
 			file << " ";
 		}
 	}
-
 	file.close();
 }
 
 int fileRead(int a[], int count) 
 {
-	fstream file;
-	file.open("in.txt", ios::in);
+	fstream start;
+	start.open("in.txt", ios::in);
 
 	int size = 0;
 
-	while(!file.eof() && count > size)
+	while(!start.eof() && count > size)
 	{
-		file >> a[size];
+		start >> a[size];
 		size++;
 	}
 
-	file.close();
+	start.close();
 
 	return size;
 }

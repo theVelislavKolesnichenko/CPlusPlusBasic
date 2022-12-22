@@ -15,14 +15,15 @@ struct Book {
 	double pice;
 };
 
-#define booksCount 25
+#define booksCount 3
+int COUNT = 3;
 
 void bookIn(Book books[], int count);
 void bookOut(Book books[], int start, int end);
 void bookBinaryFileSave(Book books[], int count);
 int bookBinaryFileRead(Book books[], int count);
 void bookTextFileSave(Book books[], int count);
-void bookTextFileRead(Book books[]);
+int bookTextFileRead(Book books[]);
 void bookSort(Book books[], int count);
 void printBookByAuthor(Book books[], int count);
 int maxBookCount(Book books[], int count);
@@ -249,17 +250,27 @@ void bookIn(Book books[], int count)
 
 void bookOut(Book books[], int start, int end)
 {
+	fstream file;
+	file.open("output.txt", ios::out);
+
 	cout << "2. Print Books" << endl;
 	int page = 1;
 	for (int i = start; i < end; i++)
 	{
 		cout << "Book " << i << endl;
+		file << "Book " << i << endl;
 		cout << "Number: " << books[i].number << endl;
+		file << "Number: " << books[i].number << endl;
 		cout << "Title: " << books[i].title << endl;
+		file << "Title: " << books[i].title << endl;
 		cout << "Author: " << books[i].author << endl;
+		file << "Author: " << books[i].author << endl;
 		cout << "Pages: " << books[i].pages << endl;
+		file << "Pages: " << books[i].pages << endl;
 		cout << "Price: " << books[i].pice << endl;
+		file << "Price: " << books[i].pice << endl;
 		cout << "Count: " << books[i].count << endl;
+		file << "Count: " << books[i].count << endl;
 
 		if ((i + 1) % 5 == 0) 
 		{
@@ -273,6 +284,8 @@ void bookOut(Book books[], int start, int end)
 			system("cls");
 		}
 	}
+
+	file.close();
 }
 
 void bookBinaryFileSave(Book books[], int count)
@@ -280,7 +293,7 @@ void bookBinaryFileSave(Book books[], int count)
 	cout << "3. Save Books in binary file" << endl;
 	fstream file;
 	file.open("Books.bin", ios::binary | ios::out);
-	file.write((char*)books, sizeof(books) * count);
+	file.write((char*)books, sizeof(Book) * count);
 	file.close();
 }
 //I 
@@ -302,11 +315,11 @@ int bookBinaryFileRead(Book books[], int count)
 	file.seekg(0L, ios::end);
 	long size = (long)file.tellg();
 	file.seekg(0L, ios::beg);
-	        //400 / 40 -> 10
+	        //360 / 120 -> 3
 	int n = size / (sizeof(Book));
-	//  10 > 15
+	//  3 > 4
 	if (n > count) {
-		       //15  * 40 -> 600
+		       //2  * 120 -> 240
 		size = count * sizeof(Book);
 		n = count;
 	}
@@ -329,18 +342,19 @@ void bookTextFileSave(Book books[], int count)
 		file << books[i].title << endl;
 		file << books[i].author << endl;
 		file << books[i].pages << endl;
-		file << books[i].pice << endl;
+		file << books[i].pice << endl << endl;
 	}
 
 	file.close();
 }
 
-void bookTextFileRead(Book books[])
+int bookTextFileRead(Book books[])
 {
 	cout << "6. Read Books from text file" << endl;
 	fstream file;
 	file.open("Books.txt", ios::in);
-	for (int i = 0; i < booksCount; i++)
+	int i = 0;
+	while (!file.eof())
 	{
 		file >> books[i].number;
 		file >> books[i].count;
@@ -351,8 +365,11 @@ void bookTextFileRead(Book books[])
 		file >> books[i].pages;
 		file >> books[i].pice;
 		file.ignore();
-	}
+		i++;
+	}	
 	file.close();
+
+	return i;
 }
 
 void bookSort(Book books[], int count)
